@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .factory('Account', Account);
 
     Account.$inject = ['$resource'];

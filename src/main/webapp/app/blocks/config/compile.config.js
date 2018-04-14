@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .config(compileServiceConfig);
 
     compileServiceConfig.$inject = ['$compileProvider','DEBUG_INFO_ENABLED'];

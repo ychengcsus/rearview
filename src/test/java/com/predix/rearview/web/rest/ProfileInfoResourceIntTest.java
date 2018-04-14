@@ -1,7 +1,7 @@
 package com.predix.rearview.web.rest;
 
 import io.github.jhipster.config.JHipsterProperties;
-import com.predix.rearview.RearviewApp;
+import com.predix.rearview.RearviewSandiegoApp;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see ProfileInfoResource
  **/
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = RearviewApp.class)
+@SpringBootTest(classes = RearviewSandiegoApp.class)
 public class ProfileInfoResourceIntTest {
 
     @Mock

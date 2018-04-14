@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .controller('PasswordController', PasswordController);
 
     PasswordController.$inject = ['Auth', 'Principal'];

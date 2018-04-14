@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .directive('passwordStrengthBar', passwordStrengthBar);
 
     function passwordStrengthBar () {

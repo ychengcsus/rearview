@@ -1,6 +1,6 @@
 package com.predix.rearview.repository;
 
-import com.predix.rearview.RearviewApp;
+import com.predix.rearview.RearviewSandiegoApp;
 import com.predix.rearview.config.Constants;
 import com.predix.rearview.config.audit.AuditEventConverter;
 import com.predix.rearview.domain.PersistentAuditEvent;
@@ -32,7 +32,7 @@ import static com.predix.rearview.repository.CustomAuditEventRepository.EVENT_DA
  * @see CustomAuditEventRepository
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = RearviewApp.class)
+@SpringBootTest(classes = RearviewSandiegoApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIntTest {
 

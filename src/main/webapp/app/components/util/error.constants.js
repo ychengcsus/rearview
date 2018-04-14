@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .constant('errorConstants', (function() {
             var problemBaseUrl = 'http://www.jhipster.tech/problem';
             return {

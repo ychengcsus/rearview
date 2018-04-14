@@ -1,0 +1,80 @@
+<div>
+    <h2 data-translate="rearviewSandiegoApp.assets.home.title">Assets</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="assets.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="rearviewSandiegoApp.assets.home.createLabel">
+                        Create new Assets
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="assetUuid"><span data-translate="rearviewSandiegoApp.assets.assetUuid">Asset Uuid</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span data-translate="rearviewSandiegoApp.assets.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="properties"><span data-translate="rearviewSandiegoApp.assets.properties">Properties</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span data-translate="rearviewSandiegoApp.assets.status">Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="assetType"><span data-translate="rearviewSandiegoApp.assets.assetType">Asset Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="mediaTypes"><span data-translate="rearviewSandiegoApp.assets.mediaTypes">Media Types</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="eventTypes"><span data-translate="rearviewSandiegoApp.assets.eventTypes">Event Types</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="coordinates"><span data-translate="rearviewSandiegoApp.assets.coordinates">Coordinates</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="parentAssetUuid"><span data-translate="rearviewSandiegoApp.assets.parentAssetUuid">Parent Asset Uuid</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="assetCreationDate"><span data-translate="rearviewSandiegoApp.assets.assetCreationDate">Asset Creation Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="assetToLocationId"><span data-translate="rearviewSandiegoApp.assets.assetToLocationId">Asset To Location Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="assets in vm.assets track by assets.id">
+                    <td><a ui-sref="assets-detail({id:assets.id})">{{assets.id}}</a></td>
+                    <td>{{assets.assetUuid}}</td>
+                    <td>{{assets.description}}</td>
+                    <td>{{assets.properties}}</td>
+                    <td>{{assets.status}}</td>
+                    <td>{{assets.assetType}}</td>
+                    <td>{{assets.mediaTypes}}</td>
+                    <td>{{assets.eventTypes}}</td>
+                    <td>{{assets.coordinates}}</td>
+                    <td>{{assets.parentAssetUuid}}</td>
+                    <td>{{assets.assetCreationDate | date:'medium'}}</td>
+                    <td>{{assets.assetToLocationId}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="assets-detail({id:assets.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="assets.edit({id:assets.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="assets.delete({id:assets.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

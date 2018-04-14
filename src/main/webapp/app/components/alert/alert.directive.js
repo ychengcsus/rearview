@@ -11,7 +11,7 @@
     };
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .component('jhiAlert', jhiAlert);
 
     jhiAlertController.$inject = ['$scope', 'AlertService'];

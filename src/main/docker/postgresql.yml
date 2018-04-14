@@ -1,0 +1,11 @@
+version: '2'
+services:
+    rearview_sandiego-postgresql:
+        image: postgres:9.6.5
+        # volumes:
+        #     - ~/volumes/jhipster/rearview_sandiego/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=rearview_sandiego
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

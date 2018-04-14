@@ -11,15 +11,15 @@ public final class HeaderUtil {
 
     private static final Logger log = LoggerFactory.getLogger(HeaderUtil.class);
 
-    private static final String APPLICATION_NAME = "rearviewApp";
+    private static final String APPLICATION_NAME = "rearviewSandiegoApp";
 
     private HeaderUtil() {
     }
 
     public static HttpHeaders createAlert(String message, String param) {
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-rearviewApp-alert", message);
-        headers.add("X-rearviewApp-params", param);
+        headers.add("X-rearviewSandiegoApp-alert", message);
+        headers.add("X-rearviewSandiegoApp-params", param);
         return headers;
     }
 
@@ -38,8 +38,8 @@ public final class HeaderUtil {
     public static HttpHeaders createFailureAlert(String entityName, String errorKey, String defaultMessage) {
         log.error("Entity processing failed, {}", defaultMessage);
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-rearviewApp-error", "error." + errorKey);
-        headers.add("X-rearviewApp-params", entityName);
+        headers.add("X-rearviewSandiegoApp-error", "error." + errorKey);
+        headers.add("X-rearviewSandiegoApp-params", entityName);
         return headers;
     }
 }

@@ -1,6 +1,6 @@
 {
-  "name": "rearviewApp",
-  "short_name": "rearviewApp",
+  "name": "rearviewSandiegoApp",
+  "short_name": "rearviewSandiegoApp",
   "icons": [
       {
           "src": "/content/images/logo-jhipster.png",

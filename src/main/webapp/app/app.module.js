@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp', [
+        .module('rearviewSandiegoApp', [
             'ngStorage',
             'tmh.dynamicLocale',
             'pascalprecht.translate',

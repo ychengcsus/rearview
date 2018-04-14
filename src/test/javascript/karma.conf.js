@@ -52,12 +52,12 @@ module.exports = function (config) {
             'src/main/webapp/app/**/*.+(js|html)',
             'src/test/javascript/spec/helpers/module.js',
             'src/test/javascript/spec/helpers/httpBackend.js',
-            'src/test/javascript/**/!(karma.conf).js'
+            'src/test/javascript/**/!(karma.conf|protractor.conf).js'
         ],
 
 
         // list of files / patterns to exclude
-        exclude: [],
+        exclude: ['src/test/javascript/e2e/**'],
 
         preprocessors: {
             './**/*.js': sourcePreprocessors

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .directive('jhSortBy', jhSortBy);
 
     function jhSortBy() {

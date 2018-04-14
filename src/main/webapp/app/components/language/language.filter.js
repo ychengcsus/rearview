@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .filter('findLanguageFromKey', findLanguageFromKey)
         .filter('findLanguageRtlFromKey', findLanguageRtlFromKey);
 

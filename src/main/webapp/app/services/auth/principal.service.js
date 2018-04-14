@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .factory('Principal', Principal);
 
     Principal.$inject = ['$q', 'Account'];

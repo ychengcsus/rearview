@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .constant('paginationConstants', {
             'itemsPerPage': 20
         });

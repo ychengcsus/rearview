@@ -13,23 +13,15 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
-eureka:
-    client:
-        enabled: true
-    instance:
-        appname: rearview
-        instanceId: rearview:${spring.application.instance-id:${random.value}}
 
 spring:
     application:
-        name: rearview
+        name: rearview_sandiego
     jackson:
         serialization.write_dates_as_timestamps: false
-    cache:
-        type: simple
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:mem:rearview;DB_CLOSE_DELAY=-1
+        url: jdbc:h2:mem:rearview_sandiego;DB_CLOSE_DELAY=-1
         name:
         username:
         password:
@@ -92,11 +84,9 @@ jhipster:
         from: test@localhost
         base-url: http://127.0.0.1:8080
     security:
-        authentication:
-            jwt:
-                secret: 60abcd424d1b571e53f7a3bcff2a3d8315d9d5a2
-                # Token is valid 24 hours
-                token-validity-in-seconds: 86400
+        remember-me:
+            # security key (this key should be unique for your application, and kept secret)
+            key: cf348a22bd401d381afe0a8fad22cc085bd18f19
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
         logs: # Reports Dropwizard metrics in the logs

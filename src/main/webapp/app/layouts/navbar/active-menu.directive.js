@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .directive('activeMenu', activeMenu);
 
     activeMenu.$inject = ['$translate', '$locale', 'tmhDynamicLocale'];

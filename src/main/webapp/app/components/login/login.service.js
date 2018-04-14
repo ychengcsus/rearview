@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .factory('LoginService', LoginService);
 
     LoginService.$inject = ['$uibModal'];

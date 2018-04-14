@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span data-translate="rearviewSandiegoApp.assets.detail.title">Assets</span> {{vm.assets.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="rearviewSandiegoApp.assets.assetUuid">Asset Uuid</span></dt>
+        <dd>
+            <span>{{vm.assets.assetUuid}}</span>
+        </dd>
+        <dt><span data-translate="rearviewSandiegoApp.assets.description">Description</span></dt>
+        <dd>
+            <span>{{vm.assets.description}}</span>
+        </dd>
+        <dt><span data-translate="rearviewSandiegoApp.assets.properties">Properties</span></dt>
+        <dd>
+            <span>{{vm.assets.properties}}</span>
+        </dd>
+        <dt><span data-translate="rearviewSandiegoApp.assets.status">Status</span></dt>
+        <dd>
+            <span>{{vm.assets.status}}</span>
+        </dd>
+        <dt><span data-translate="rearviewSandiegoApp.assets.assetType">Asset Type</span></dt>
+        <dd>
+            <span>{{vm.assets.assetType}}</span>
+        </dd>
+        <dt><span data-translate="rearviewSandiegoApp.assets.mediaTypes">Media Types</span></dt>
+        <dd>
+            <span>{{vm.assets.mediaTypes}}</span>
+        </dd>
+        <dt><span data-translate="rearviewSandiegoApp.assets.eventTypes">Event Types</span></dt>
+        <dd>
+            <span>{{vm.assets.eventTypes}}</span>
+        </dd>
+        <dt><span data-translate="rearviewSandiegoApp.assets.coordinates">Coordinates</span></dt>
+        <dd>
+            <span>{{vm.assets.coordinates}}</span>
+        </dd>
+        <dt><span data-translate="rearviewSandiegoApp.assets.parentAssetUuid">Parent Asset Uuid</span></dt>
+        <dd>
+            <span>{{vm.assets.parentAssetUuid}}</span>
+        </dd>
+        <dt><span data-translate="rearviewSandiegoApp.assets.assetCreationDate">Asset Creation Date</span></dt>
+        <dd>
+            <span>{{vm.assets.assetCreationDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="rearviewSandiegoApp.assets.assetToLocationId">Asset To Location Id</span></dt>
+        <dd>
+            <span>{{vm.assets.assetToLocationId}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="assets-detail.edit({id:vm.assets.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

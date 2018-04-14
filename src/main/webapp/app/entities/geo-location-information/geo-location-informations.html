@@ -1,0 +1,82 @@
+<div>
+    <h2 data-translate="rearviewSandiegoApp.geoLocationInformation.home.title">Geo Location Informations</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="geo-location-information.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="rearviewSandiegoApp.geoLocationInformation.home.createLabel">
+                        Create new Geo Location Information
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="locationUuid"><span data-translate="rearviewSandiegoApp.geoLocationInformation.locationUuid">Location Uuid</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="locationType"><span data-translate="rearviewSandiegoApp.geoLocationInformation.locationType">Location Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="parentLocationUuid"><span data-translate="rearviewSandiegoApp.geoLocationInformation.parentLocationUuid">Parent Location Uuid</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="coordinatesType"><span data-translate="rearviewSandiegoApp.geoLocationInformation.coordinatesType">Coordinates Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="coordinates"><span data-translate="rearviewSandiegoApp.geoLocationInformation.coordinates">Coordinates</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="city"><span data-translate="rearviewSandiegoApp.geoLocationInformation.city">City</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="state"><span data-translate="rearviewSandiegoApp.geoLocationInformation.state">State</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="country"><span data-translate="rearviewSandiegoApp.geoLocationInformation.country">Country</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="zipcode"><span data-translate="rearviewSandiegoApp.geoLocationInformation.zipcode">Zipcode</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="timezone"><span data-translate="rearviewSandiegoApp.geoLocationInformation.timezone">Timezone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="address"><span data-translate="rearviewSandiegoApp.geoLocationInformation.address">Address</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="analyticCategory"><span data-translate="rearviewSandiegoApp.geoLocationInformation.analyticCategory">Analytic Category</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="geoLocationInformation in vm.geoLocationInformations track by geoLocationInformation.id">
+                    <td><a ui-sref="geo-location-information-detail({id:geoLocationInformation.id})">{{geoLocationInformation.id}}</a></td>
+                    <td>{{geoLocationInformation.locationUuid}}</td>
+                    <td>{{geoLocationInformation.locationType}}</td>
+                    <td>{{geoLocationInformation.parentLocationUuid}}</td>
+                    <td>{{geoLocationInformation.coordinatesType}}</td>
+                    <td>{{geoLocationInformation.coordinates}}</td>
+                    <td>{{geoLocationInformation.city}}</td>
+                    <td>{{geoLocationInformation.state}}</td>
+                    <td>{{geoLocationInformation.country}}</td>
+                    <td>{{geoLocationInformation.zipcode}}</td>
+                    <td>{{geoLocationInformation.timezone}}</td>
+                    <td>{{geoLocationInformation.address}}</td>
+                    <td>{{geoLocationInformation.analyticCategory}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="geo-location-information-detail({id:geoLocationInformation.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="geo-location-information.edit({id:geoLocationInformation.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="geo-location-information.delete({id:geoLocationInformation.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "assetToLocation",
+            "otherEntityName": "geoLocationInformation",
+            "relationshipType": "one-to-one",
+            "relationshipValidateRules": [],
+            "otherEntityField": "coordinates",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "locationToAsset"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "assetUUiD",
+            "fieldType": "Long",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "properties",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "assetType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mediaType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "eventTypes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "coordinates",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "parentAssetUUiD",
+            "fieldType": "Long",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "assetCreationDate",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20180327000501",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "assets",
+    "jpaMetamodelFiltering": true,
+    "pagination": "pagination"
+}

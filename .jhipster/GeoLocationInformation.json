@@ -1,0 +1,61 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "locationUUiD",
+            "fieldType": "Long",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "locationType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "parentLocationUUiD",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "coordinatesType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "coordinates",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "country",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zipcode",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "timezone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "analyticCategory",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180326235912",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "geo_location_information",
+    "jpaMetamodelFiltering": true,
+    "pagination": "pagination"
+}

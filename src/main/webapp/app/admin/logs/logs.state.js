@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .config(stateConfig);
 
     stateConfig.$inject = ['$stateProvider'];

@@ -1,7 +1,7 @@
 package com.predix.rearview.service;
 import com.predix.rearview.config.Constants;
 
-import com.predix.rearview.RearviewApp;
+import com.predix.rearview.RearviewSandiegoApp;
 import com.predix.rearview.domain.User;
 import io.github.jhipster.config.JHipsterProperties;
 import org.junit.Before;
@@ -30,7 +30,7 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = RearviewApp.class)
+@SpringBootTest(classes = RearviewSandiegoApp.class)
 public class MailServiceIntTest {
 
     @Autowired

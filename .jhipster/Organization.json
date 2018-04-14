@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "orgUUiD",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "orgName",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "orgDescription",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180326235304",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "organization",
+    "jpaMetamodelFiltering": true,
+    "pagination": "pagination"
+}

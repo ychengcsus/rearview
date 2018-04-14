@@ -18,6 +18,6 @@
     };
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .component('jhiItemCount', jhiItemCount);
 })();

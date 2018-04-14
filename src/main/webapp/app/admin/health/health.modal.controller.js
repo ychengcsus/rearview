@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('rearviewApp')
+    angular.module('rearviewSandiegoApp')
         .controller('HealthModalController', HealthModalController);
 
     HealthModalController.$inject = ['$uibModalInstance', 'currentHealth', 'baseName', 'subSystemName'];

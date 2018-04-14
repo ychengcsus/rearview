@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewApp')
+        .module('rearviewSandiegoApp')
         .factory('PaginationUtil', PaginationUtil);
 
     function PaginationUtil () {

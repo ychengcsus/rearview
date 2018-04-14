@@ -1,6 +1,6 @@
 {
   "version": "0.0.0",
-  "name": "rearview",
+  "name": "rearview-sandiego",
   "appPath": "src/main/webapp/",
   "testPath": "src/test/javascript/spec",
   "dependencies": {

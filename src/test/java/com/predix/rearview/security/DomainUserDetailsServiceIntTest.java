@@ -1,6 +1,6 @@
 package com.predix.rearview.security;
 
-import com.predix.rearview.RearviewApp;
+import com.predix.rearview.RearviewSandiegoApp;
 import com.predix.rearview.domain.User;
 import com.predix.rearview.repository.UserRepository;
 
@@ -25,7 +25,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @see DomainUserDetailsService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = RearviewApp.class)
+@SpringBootTest(classes = RearviewSandiegoApp.class)
 @Transactional
 public class DomainUserDetailsServiceIntTest {
 
