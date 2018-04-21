@@ -23,17 +23,13 @@ describe('GeoLocationInformation e2e test', function () {
     it('should load GeoLocationInformations', function () {
         entityMenu.click();
         element.all(by.css('[ui-sref="geo-location-information"]')).first().click().then(function() {
-            element.all(by.css('h2')).first().getAttribute('data-translate').then(function (value) {
-                expect(value).toMatch(/rearviewSandiegoApp.geoLocationInformation.home.title/);
-            });
+            expect(element.all(by.css('h2')).first().getText()).toMatch(/Geo Location Informations/);
         });
     });
 
     it('should load create GeoLocationInformation dialog', function () {
         element(by.css('[ui-sref="geo-location-information.new"]')).click().then(function() {
-            element(by.css('h4.modal-title')).getAttribute('data-translate').then(function (value) {
-                expect(value).toMatch(/rearviewSandiegoApp.geoLocationInformation.home.createOrEditLabel/);
-            });
+            expect(element(by.css('h4.modal-title')).getText()).toMatch(/Create or edit a Geo Location Information/);
             element(by.css('button.close')).click();
         });
     });

@@ -1,0 +1,80 @@
+<div>
+    <h2>Traffic Measurements</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="traffic-measurements.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Traffic Measurements
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="startTime"><span>Start Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="endTime"><span>End Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="assetUuid"><span>Asset Uuid</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="assetDescription"><span>Asset Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="eventType"><span>Event Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="counterDirection"><span>Counter Direction</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="counterDirectionSpeed"><span>Counter Direction Speed</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="counterDirectionVehicleCount"><span>Counter Direction Vehicle Count</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="speed"><span>Speed</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicleCount"><span>Vehicle Count</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="timestamp"><span>Timestamp</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="trafficMeasurements in vm.trafficMeasurements track by trafficMeasurements.id">
+                    <td><a ui-sref="traffic-measurements-detail({id:trafficMeasurements.id})">{{trafficMeasurements.id}}</a></td>
+                    <td>{{trafficMeasurements.startTime | date:'medium'}}</td>
+                    <td>{{trafficMeasurements.endTime | date:'medium'}}</td>
+                    <td>{{trafficMeasurements.assetUuid}}</td>
+                    <td>{{trafficMeasurements.assetDescription}}</td>
+                    <td>{{trafficMeasurements.eventType}}</td>
+                    <td>{{trafficMeasurements.counterDirection}}</td>
+                    <td>{{trafficMeasurements.counterDirectionSpeed}}</td>
+                    <td>{{trafficMeasurements.counterDirectionVehicleCount}}</td>
+                    <td>{{trafficMeasurements.speed}}</td>
+                    <td>{{trafficMeasurements.vehicleCount}}</td>
+                    <td>{{trafficMeasurements.timestamp | date:'medium'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="traffic-measurements-detail({id:trafficMeasurements.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="traffic-measurements.edit({id:trafficMeasurements.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="traffic-measurements.delete({id:trafficMeasurements.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

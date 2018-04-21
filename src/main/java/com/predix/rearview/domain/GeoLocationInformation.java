@@ -1,5 +1,7 @@
 package com.predix.rearview.domain;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 
@@ -11,6 +13,7 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "geo_location_information")
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class GeoLocationInformation implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -33,7 +36,7 @@ public class GeoLocationInformation implements Serializable {
     private String coordinatesType;
 
     @Column(name = "coordinates")
-    private Long coordinates;
+    private String coordinates;
 
     @Column(name = "city")
     private String city;
@@ -117,16 +120,16 @@ public class GeoLocationInformation implements Serializable {
         this.coordinatesType = coordinatesType;
     }
 
-    public Long getCoordinates() {
+    public String getCoordinates() {
         return coordinates;
     }
 
-    public GeoLocationInformation coordinates(Long coordinates) {
+    public GeoLocationInformation coordinates(String coordinates) {
         this.coordinates = coordinates;
         return this;
     }
 
-    public void setCoordinates(Long coordinates) {
+    public void setCoordinates(String coordinates) {
         this.coordinates = coordinates;
     }
 
@@ -250,7 +253,7 @@ public class GeoLocationInformation implements Serializable {
             ", locationType='" + getLocationType() + "'" +
             ", parentLocationUuid=" + getParentLocationUuid() +
             ", coordinatesType='" + getCoordinatesType() + "'" +
-            ", coordinates=" + getCoordinates() +
+            ", coordinates='" + getCoordinates() + "'" +
             ", city='" + getCity() + "'" +
             ", state='" + getState() + "'" +
             ", country='" + getCountry() + "'" +

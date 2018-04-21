@@ -1,6 +1,6 @@
 package com.predix.rearview.web.rest;
 
-import com.predix.rearview.RearviewSandiegoApp;
+import com.predix.rearview.RearviewFinal1App;
 
 import com.predix.rearview.domain.GeoLocationInformation;
 import com.predix.rearview.repository.GeoLocationInformationRepository;
@@ -38,7 +38,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see GeoLocationInformationResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = RearviewSandiegoApp.class)
+@SpringBootTest(classes = RearviewFinal1App.class)
 public class GeoLocationInformationResourceIntTest {
 
     private static final Long DEFAULT_LOCATION_UUID = 1L;
@@ -53,8 +53,8 @@ public class GeoLocationInformationResourceIntTest {
     private static final String DEFAULT_COORDINATES_TYPE = "AAAAAAAAAA";
     private static final String UPDATED_COORDINATES_TYPE = "BBBBBBBBBB";
 
-    private static final Long DEFAULT_COORDINATES = 1L;
-    private static final Long UPDATED_COORDINATES = 2L;
+    private static final String DEFAULT_COORDINATES = "AAAAAAAAAA";
+    private static final String UPDATED_COORDINATES = "BBBBBBBBBB";
 
     private static final String DEFAULT_CITY = "AAAAAAAAAA";
     private static final String UPDATED_CITY = "BBBBBBBBBB";
@@ -206,7 +206,7 @@ public class GeoLocationInformationResourceIntTest {
             .andExpect(jsonPath("$.[*].locationType").value(hasItem(DEFAULT_LOCATION_TYPE.toString())))
             .andExpect(jsonPath("$.[*].parentLocationUuid").value(hasItem(DEFAULT_PARENT_LOCATION_UUID.intValue())))
             .andExpect(jsonPath("$.[*].coordinatesType").value(hasItem(DEFAULT_COORDINATES_TYPE.toString())))
-            .andExpect(jsonPath("$.[*].coordinates").value(hasItem(DEFAULT_COORDINATES.intValue())))
+            .andExpect(jsonPath("$.[*].coordinates").value(hasItem(DEFAULT_COORDINATES.toString())))
             .andExpect(jsonPath("$.[*].city").value(hasItem(DEFAULT_CITY.toString())))
             .andExpect(jsonPath("$.[*].state").value(hasItem(DEFAULT_STATE.toString())))
             .andExpect(jsonPath("$.[*].country").value(hasItem(DEFAULT_COUNTRY.toString())))
@@ -231,7 +231,7 @@ public class GeoLocationInformationResourceIntTest {
             .andExpect(jsonPath("$.locationType").value(DEFAULT_LOCATION_TYPE.toString()))
             .andExpect(jsonPath("$.parentLocationUuid").value(DEFAULT_PARENT_LOCATION_UUID.intValue()))
             .andExpect(jsonPath("$.coordinatesType").value(DEFAULT_COORDINATES_TYPE.toString()))
-            .andExpect(jsonPath("$.coordinates").value(DEFAULT_COORDINATES.intValue()))
+            .andExpect(jsonPath("$.coordinates").value(DEFAULT_COORDINATES.toString()))
             .andExpect(jsonPath("$.city").value(DEFAULT_CITY.toString()))
             .andExpect(jsonPath("$.state").value(DEFAULT_STATE.toString()))
             .andExpect(jsonPath("$.country").value(DEFAULT_COUNTRY.toString()))

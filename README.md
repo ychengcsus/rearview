@@ -1,4 +1,4 @@
-# rearview_sandiego
+# rearview_final1
 This application was generated using JHipster 4.14.1, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.14.1](http://www.jhipster.tech/documentation-archive/v4.14.1).
 
 ## Development
@@ -35,7 +35,7 @@ For further instructions on how to develop with JHipster, have a look at [Using 
 
 ## Building for production
 
-To optimize the rearview_sandiego application for production, run:
+To optimize the rearview_final1 application for production, run:
 
     ./mvnw -Pprod clean package
 
@@ -96,6 +96,7 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [JHipster 4.14.1 archive]: http://www.jhipster.tech/documentation-archive/v4.14.1
 
 [Using JHipster in development]: http://www.jhipster.tech/documentation-archive/v4.14.1/development/
+[Service Discovery and Configuration with the JHipster-Registry]: http://www.jhipster.tech/documentation-archive/v4.14.1/microservices-architecture/#jhipster-registry
 [Using Docker and Docker-Compose]: http://www.jhipster.tech/documentation-archive/v4.14.1/docker-compose
 [Using JHipster in production]: http://www.jhipster.tech/documentation-archive/v4.14.1/production/
 [Running tests page]: http://www.jhipster.tech/documentation-archive/v4.14.1/running-tests/

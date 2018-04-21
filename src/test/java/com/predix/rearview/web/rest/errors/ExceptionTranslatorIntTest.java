@@ -1,6 +1,6 @@
 package com.predix.rearview.web.rest.errors;
 
-import com.predix.rearview.RearviewSandiegoApp;
+import com.predix.rearview.RearviewFinal1App;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see ExceptionTranslator
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = RearviewSandiegoApp.class)
+@SpringBootTest(classes = RearviewFinal1App.class)
 public class ExceptionTranslatorIntTest {
 
     @Autowired

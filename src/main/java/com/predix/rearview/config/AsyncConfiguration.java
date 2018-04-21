@@ -35,7 +35,7 @@ public class AsyncConfiguration implements AsyncConfigurer {
         executor.setCorePoolSize(jHipsterProperties.getAsync().getCorePoolSize());
         executor.setMaxPoolSize(jHipsterProperties.getAsync().getMaxPoolSize());
         executor.setQueueCapacity(jHipsterProperties.getAsync().getQueueCapacity());
-        executor.setThreadNamePrefix("rearview-sandiego-Executor-");
+        executor.setThreadNamePrefix("rearview-final-1-Executor-");
         return new ExceptionHandlingAsyncTaskExecutor(executor);
     }
 

@@ -22,7 +22,7 @@ public class AssetsDTO implements Serializable {
 
     private String assetType;
 
-    private String mediaTypes;
+    private String mediaType;
 
     private String eventTypes;
 
@@ -82,12 +82,12 @@ public class AssetsDTO implements Serializable {
         this.assetType = assetType;
     }
 
-    public String getMediaTypes() {
-        return mediaTypes;
+    public String getMediaType() {
+        return mediaType;
     }
 
-    public void setMediaTypes(String mediaTypes) {
-        this.mediaTypes = mediaTypes;
+    public void setMediaType(String mediaType) {
+        this.mediaType = mediaType;
     }
 
     public String getEventTypes() {
@@ -160,7 +160,7 @@ public class AssetsDTO implements Serializable {
             ", properties='" + getProperties() + "'" +
             ", status='" + getStatus() + "'" +
             ", assetType='" + getAssetType() + "'" +
-            ", mediaTypes='" + getMediaTypes() + "'" +
+            ", mediaType='" + getMediaType() + "'" +
             ", eventTypes='" + getEventTypes() + "'" +
             ", coordinates='" + getCoordinates() + "'" +
             ", parentAssetUuid=" + getParentAssetUuid() +

@@ -19,7 +19,7 @@ public class GeoLocationInformationDTO implements Serializable {
 
     private String coordinatesType;
 
-    private Long coordinates;
+    private String coordinates;
 
     private String city;
 
@@ -75,11 +75,11 @@ public class GeoLocationInformationDTO implements Serializable {
         this.coordinatesType = coordinatesType;
     }
 
-    public Long getCoordinates() {
+    public String getCoordinates() {
         return coordinates;
     }
 
-    public void setCoordinates(Long coordinates) {
+    public void setCoordinates(String coordinates) {
         this.coordinates = coordinates;
     }
 
@@ -168,7 +168,7 @@ public class GeoLocationInformationDTO implements Serializable {
             ", locationType='" + getLocationType() + "'" +
             ", parentLocationUuid=" + getParentLocationUuid() +
             ", coordinatesType='" + getCoordinatesType() + "'" +
-            ", coordinates=" + getCoordinates() +
+            ", coordinates='" + getCoordinates() + "'" +
             ", city='" + getCity() + "'" +
             ", state='" + getState() + "'" +
             ", country='" + getCountry() + "'" +

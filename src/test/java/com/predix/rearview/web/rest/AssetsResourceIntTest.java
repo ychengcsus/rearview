@@ -1,6 +1,6 @@
 package com.predix.rearview.web.rest;
 
-import com.predix.rearview.RearviewSandiegoApp;
+import com.predix.rearview.RearviewFinal1App;
 
 import com.predix.rearview.domain.Assets;
 import com.predix.rearview.repository.AssetsRepository;
@@ -43,7 +43,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AssetsResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = RearviewSandiegoApp.class)
+@SpringBootTest(classes = RearviewFinal1App.class)
 public class AssetsResourceIntTest {
 
     private static final Long DEFAULT_ASSET_UUID = 1L;
@@ -61,8 +61,8 @@ public class AssetsResourceIntTest {
     private static final String DEFAULT_ASSET_TYPE = "AAAAAAAAAA";
     private static final String UPDATED_ASSET_TYPE = "BBBBBBBBBB";
 
-    private static final String DEFAULT_MEDIA_TYPES = "AAAAAAAAAA";
-    private static final String UPDATED_MEDIA_TYPES = "BBBBBBBBBB";
+    private static final String DEFAULT_MEDIA_TYPE = "AAAAAAAAAA";
+    private static final String UPDATED_MEDIA_TYPE = "BBBBBBBBBB";
 
     private static final String DEFAULT_EVENT_TYPES = "AAAAAAAAAA";
     private static final String UPDATED_EVENT_TYPES = "BBBBBBBBBB";
@@ -128,7 +128,7 @@ public class AssetsResourceIntTest {
             .properties(DEFAULT_PROPERTIES)
             .status(DEFAULT_STATUS)
             .assetType(DEFAULT_ASSET_TYPE)
-            .mediaTypes(DEFAULT_MEDIA_TYPES)
+            .mediaType(DEFAULT_MEDIA_TYPE)
             .eventTypes(DEFAULT_EVENT_TYPES)
             .coordinates(DEFAULT_COORDINATES)
             .parentAssetUuid(DEFAULT_PARENT_ASSET_UUID)
@@ -163,7 +163,7 @@ public class AssetsResourceIntTest {
         assertThat(testAssets.getProperties()).isEqualTo(DEFAULT_PROPERTIES);
         assertThat(testAssets.getStatus()).isEqualTo(DEFAULT_STATUS);
         assertThat(testAssets.getAssetType()).isEqualTo(DEFAULT_ASSET_TYPE);
-        assertThat(testAssets.getMediaTypes()).isEqualTo(DEFAULT_MEDIA_TYPES);
+        assertThat(testAssets.getMediaType()).isEqualTo(DEFAULT_MEDIA_TYPE);
         assertThat(testAssets.getEventTypes()).isEqualTo(DEFAULT_EVENT_TYPES);
         assertThat(testAssets.getCoordinates()).isEqualTo(DEFAULT_COORDINATES);
         assertThat(testAssets.getParentAssetUuid()).isEqualTo(DEFAULT_PARENT_ASSET_UUID);
@@ -207,7 +207,7 @@ public class AssetsResourceIntTest {
             .andExpect(jsonPath("$.[*].properties").value(hasItem(DEFAULT_PROPERTIES.toString())))
             .andExpect(jsonPath("$.[*].status").value(hasItem(DEFAULT_STATUS.toString())))
             .andExpect(jsonPath("$.[*].assetType").value(hasItem(DEFAULT_ASSET_TYPE.toString())))
-            .andExpect(jsonPath("$.[*].mediaTypes").value(hasItem(DEFAULT_MEDIA_TYPES.toString())))
+            .andExpect(jsonPath("$.[*].mediaType").value(hasItem(DEFAULT_MEDIA_TYPE.toString())))
             .andExpect(jsonPath("$.[*].eventTypes").value(hasItem(DEFAULT_EVENT_TYPES.toString())))
             .andExpect(jsonPath("$.[*].coordinates").value(hasItem(DEFAULT_COORDINATES.toString())))
             .andExpect(jsonPath("$.[*].parentAssetUuid").value(hasItem(DEFAULT_PARENT_ASSET_UUID.intValue())))
@@ -231,7 +231,7 @@ public class AssetsResourceIntTest {
             .andExpect(jsonPath("$.properties").value(DEFAULT_PROPERTIES.toString()))
             .andExpect(jsonPath("$.status").value(DEFAULT_STATUS.toString()))
             .andExpect(jsonPath("$.assetType").value(DEFAULT_ASSET_TYPE.toString()))
-            .andExpect(jsonPath("$.mediaTypes").value(DEFAULT_MEDIA_TYPES.toString()))
+            .andExpect(jsonPath("$.mediaType").value(DEFAULT_MEDIA_TYPE.toString()))
             .andExpect(jsonPath("$.eventTypes").value(DEFAULT_EVENT_TYPES.toString()))
             .andExpect(jsonPath("$.coordinates").value(DEFAULT_COORDINATES.toString()))
             .andExpect(jsonPath("$.parentAssetUuid").value(DEFAULT_PARENT_ASSET_UUID.intValue()))
@@ -264,7 +264,7 @@ public class AssetsResourceIntTest {
             .properties(UPDATED_PROPERTIES)
             .status(UPDATED_STATUS)
             .assetType(UPDATED_ASSET_TYPE)
-            .mediaTypes(UPDATED_MEDIA_TYPES)
+            .mediaType(UPDATED_MEDIA_TYPE)
             .eventTypes(UPDATED_EVENT_TYPES)
             .coordinates(UPDATED_COORDINATES)
             .parentAssetUuid(UPDATED_PARENT_ASSET_UUID)
@@ -286,7 +286,7 @@ public class AssetsResourceIntTest {
         assertThat(testAssets.getProperties()).isEqualTo(UPDATED_PROPERTIES);
         assertThat(testAssets.getStatus()).isEqualTo(UPDATED_STATUS);
         assertThat(testAssets.getAssetType()).isEqualTo(UPDATED_ASSET_TYPE);
-        assertThat(testAssets.getMediaTypes()).isEqualTo(UPDATED_MEDIA_TYPES);
+        assertThat(testAssets.getMediaType()).isEqualTo(UPDATED_MEDIA_TYPE);
         assertThat(testAssets.getEventTypes()).isEqualTo(UPDATED_EVENT_TYPES);
         assertThat(testAssets.getCoordinates()).isEqualTo(UPDATED_COORDINATES);
         assertThat(testAssets.getParentAssetUuid()).isEqualTo(UPDATED_PARENT_ASSET_UUID);

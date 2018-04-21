@@ -2,7 +2,6 @@
 
 describe('Service Tests', function () {
     beforeEach(mockApiAccountCall);
-    beforeEach(mockI18nCalls);
     beforeEach(mockScriptsCalls);
 
     describe('Auth', function () {
@@ -14,7 +13,6 @@ describe('Service Tests', function () {
             sessionStorageService = $sessionStorage;
             authService = Auth;
             spiedAuthServerProvider = AuthServerProvider;
-            $httpBackend.expectPOST(/api\/logout\?cacheBuster=\d+/).respond(200, '');
         }));
         //make sure no expectations were missed in your tests.
         //(e.g. expectGET or expectPOST)

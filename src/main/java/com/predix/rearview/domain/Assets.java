@@ -1,5 +1,7 @@
 package com.predix.rearview.domain;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 
@@ -12,6 +14,7 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "assets")
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Assets implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -36,8 +39,8 @@ public class Assets implements Serializable {
     @Column(name = "asset_type")
     private String assetType;
 
-    @Column(name = "media_types")
-    private String mediaTypes;
+    @Column(name = "media_type")
+    private String mediaType;
 
     @Column(name = "event_types")
     private String eventTypes;
@@ -128,17 +131,17 @@ public class Assets implements Serializable {
         this.assetType = assetType;
     }
 
-    public String getMediaTypes() {
-        return mediaTypes;
+    public String getMediaType() {
+        return mediaType;
     }
 
-    public Assets mediaTypes(String mediaTypes) {
-        this.mediaTypes = mediaTypes;
+    public Assets mediaType(String mediaType) {
+        this.mediaType = mediaType;
         return this;
     }
 
-    public void setMediaTypes(String mediaTypes) {
-        this.mediaTypes = mediaTypes;
+    public void setMediaType(String mediaType) {
+        this.mediaType = mediaType;
     }
 
     public String getEventTypes() {
@@ -236,7 +239,7 @@ public class Assets implements Serializable {
             ", properties='" + getProperties() + "'" +
             ", status='" + getStatus() + "'" +
             ", assetType='" + getAssetType() + "'" +
-            ", mediaTypes='" + getMediaTypes() + "'" +
+            ", mediaType='" + getMediaType() + "'" +
             ", eventTypes='" + getEventTypes() + "'" +
             ", coordinates='" + getCoordinates() + "'" +
             ", parentAssetUuid=" + getParentAssetUuid() +

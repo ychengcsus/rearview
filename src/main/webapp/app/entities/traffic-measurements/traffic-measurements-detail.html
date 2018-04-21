@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span>Traffic Measurements</span> {{vm.trafficMeasurements.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Start Time</span></dt>
+        <dd>
+            <span>{{vm.trafficMeasurements.startTime | date:'medium'}}</span>
+        </dd>
+        <dt><span>End Time</span></dt>
+        <dd>
+            <span>{{vm.trafficMeasurements.endTime | date:'medium'}}</span>
+        </dd>
+        <dt><span>Asset Uuid</span></dt>
+        <dd>
+            <span>{{vm.trafficMeasurements.assetUuid}}</span>
+        </dd>
+        <dt><span>Asset Description</span></dt>
+        <dd>
+            <span>{{vm.trafficMeasurements.assetDescription}}</span>
+        </dd>
+        <dt><span>Event Type</span></dt>
+        <dd>
+            <span>{{vm.trafficMeasurements.eventType}}</span>
+        </dd>
+        <dt><span>Counter Direction</span></dt>
+        <dd>
+            <span>{{vm.trafficMeasurements.counterDirection}}</span>
+        </dd>
+        <dt><span>Counter Direction Speed</span></dt>
+        <dd>
+            <span>{{vm.trafficMeasurements.counterDirectionSpeed}}</span>
+        </dd>
+        <dt><span>Counter Direction Vehicle Count</span></dt>
+        <dd>
+            <span>{{vm.trafficMeasurements.counterDirectionVehicleCount}}</span>
+        </dd>
+        <dt><span>Speed</span></dt>
+        <dd>
+            <span>{{vm.trafficMeasurements.speed}}</span>
+        </dd>
+        <dt><span>Vehicle Count</span></dt>
+        <dd>
+            <span>{{vm.trafficMeasurements.vehicleCount}}</span>
+        </dd>
+        <dt><span>Timestamp</span></dt>
+        <dd>
+            <span>{{vm.trafficMeasurements.timestamp | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="traffic-measurements-detail.edit({id:vm.trafficMeasurements.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

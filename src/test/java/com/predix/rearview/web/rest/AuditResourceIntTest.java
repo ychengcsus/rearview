@@ -1,6 +1,6 @@
 package com.predix.rearview.web.rest;
 
-import com.predix.rearview.RearviewSandiegoApp;
+import com.predix.rearview.RearviewFinal1App;
 import com.predix.rearview.config.audit.AuditEventConverter;
 import com.predix.rearview.domain.PersistentAuditEvent;
 import com.predix.rearview.repository.PersistenceAuditEventRepository;
@@ -33,7 +33,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AuditResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = RearviewSandiegoApp.class)
+@SpringBootTest(classes = RearviewFinal1App.class)
 @Transactional
 public class AuditResourceIntTest {
 
