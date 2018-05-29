@@ -1,4 +1,4 @@
 /**
  * Audit specific code.
  */
-package com.predix.rearview.config.audit;
+package edu.four04.sscapp.config.audit;

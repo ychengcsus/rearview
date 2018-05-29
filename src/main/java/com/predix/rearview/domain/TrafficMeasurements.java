@@ -1,4 +1,4 @@
-package com.predix.rearview.domain;
+package edu.four04.sscapp.domain;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -20,39 +20,38 @@ public class TrafficMeasurements implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
-    @SequenceGenerator(name = "sequenceGenerator")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "start_time")
     private ZonedDateTime startTime;
 
     @Column(name = "end_time")
-    private ZonedDateTime endTime;
+    private ZonedDateTime end_time;
 
     @Column(name = "asset_uuid")
-    private Long assetUuid;
+    private Long asset_uuid;
 
     @Column(name = "asset_description")
-    private String assetDescription;
+    private String asset_description;
 
     @Column(name = "event_type")
-    private String eventType;
+    private String event_type;
 
     @Column(name = "counter_direction")
-    private Long counterDirection;
+    private Integer counter_direction;
 
     @Column(name = "counter_direction_speed")
-    private Long counterDirectionSpeed;
+    private Long counter_direction_speed;
 
     @Column(name = "counter_direction_vehicle_count")
-    private Long counterDirectionVehicleCount;
+    private Long counter_direction_vehicle_count;
 
     @Column(name = "speed")
     private Long speed;
 
     @Column(name = "vehicle_count")
-    private Long vehicleCount;
+    private Long vehicle_count;
 
     @Column(name = "jhi_timestamp")
     private ZonedDateTime timestamp;
@@ -79,95 +78,95 @@ public class TrafficMeasurements implements Serializable {
         this.startTime = startTime;
     }
 
-    public ZonedDateTime getEndTime() {
-        return endTime;
+    public ZonedDateTime getEnd_time() {
+        return end_time;
     }
 
-    public TrafficMeasurements endTime(ZonedDateTime endTime) {
-        this.endTime = endTime;
+    public TrafficMeasurements end_time(ZonedDateTime end_time) {
+        this.end_time = end_time;
         return this;
     }
 
-    public void setEndTime(ZonedDateTime endTime) {
-        this.endTime = endTime;
+    public void setEnd_time(ZonedDateTime end_time) {
+        this.end_time = end_time;
     }
 
-    public Long getAssetUuid() {
-        return assetUuid;
+    public Long getAsset_uuid() {
+        return asset_uuid;
     }
 
-    public TrafficMeasurements assetUuid(Long assetUuid) {
-        this.assetUuid = assetUuid;
+    public TrafficMeasurements asset_uuid(Long asset_uuid) {
+        this.asset_uuid = asset_uuid;
         return this;
     }
 
-    public void setAssetUuid(Long assetUuid) {
-        this.assetUuid = assetUuid;
+    public void setAsset_uuid(Long asset_uuid) {
+        this.asset_uuid = asset_uuid;
     }
 
-    public String getAssetDescription() {
-        return assetDescription;
+    public String getAsset_description() {
+        return asset_description;
     }
 
-    public TrafficMeasurements assetDescription(String assetDescription) {
-        this.assetDescription = assetDescription;
+    public TrafficMeasurements asset_description(String asset_description) {
+        this.asset_description = asset_description;
         return this;
     }
 
-    public void setAssetDescription(String assetDescription) {
-        this.assetDescription = assetDescription;
+    public void setAsset_description(String asset_description) {
+        this.asset_description = asset_description;
     }
 
-    public String getEventType() {
-        return eventType;
+    public String getEvent_type() {
+        return event_type;
     }
 
-    public TrafficMeasurements eventType(String eventType) {
-        this.eventType = eventType;
+    public TrafficMeasurements event_type(String event_type) {
+        this.event_type = event_type;
         return this;
     }
 
-    public void setEventType(String eventType) {
-        this.eventType = eventType;
+    public void setEvent_type(String event_type) {
+        this.event_type = event_type;
     }
 
-    public Long getCounterDirection() {
-        return counterDirection;
+    public Integer getCounter_direction() {
+        return counter_direction;
     }
 
-    public TrafficMeasurements counterDirection(Long counterDirection) {
-        this.counterDirection = counterDirection;
+    public TrafficMeasurements counter_direction(Integer counter_direction) {
+        this.counter_direction = counter_direction;
         return this;
     }
 
-    public void setCounterDirection(Long counterDirection) {
-        this.counterDirection = counterDirection;
+    public void setCounter_direction(Integer counter_direction) {
+        this.counter_direction = counter_direction;
     }
 
-    public Long getCounterDirectionSpeed() {
-        return counterDirectionSpeed;
+    public Long getCounter_direction_speed() {
+        return counter_direction_speed;
     }
 
-    public TrafficMeasurements counterDirectionSpeed(Long counterDirectionSpeed) {
-        this.counterDirectionSpeed = counterDirectionSpeed;
+    public TrafficMeasurements counter_direction_speed(Long counter_direction_speed) {
+        this.counter_direction_speed = counter_direction_speed;
         return this;
     }
 
-    public void setCounterDirectionSpeed(Long counterDirectionSpeed) {
-        this.counterDirectionSpeed = counterDirectionSpeed;
+    public void setCounter_direction_speed(Long counter_direction_speed) {
+        this.counter_direction_speed = counter_direction_speed;
     }
 
-    public Long getCounterDirectionVehicleCount() {
-        return counterDirectionVehicleCount;
+    public Long getCounter_direction_vehicle_count() {
+        return counter_direction_vehicle_count;
     }
 
-    public TrafficMeasurements counterDirectionVehicleCount(Long counterDirectionVehicleCount) {
-        this.counterDirectionVehicleCount = counterDirectionVehicleCount;
+    public TrafficMeasurements counter_direction_vehicle_count(Long counter_direction_vehicle_count) {
+        this.counter_direction_vehicle_count = counter_direction_vehicle_count;
         return this;
     }
 
-    public void setCounterDirectionVehicleCount(Long counterDirectionVehicleCount) {
-        this.counterDirectionVehicleCount = counterDirectionVehicleCount;
+    public void setCounter_direction_vehicle_count(Long counter_direction_vehicle_count) {
+        this.counter_direction_vehicle_count = counter_direction_vehicle_count;
     }
 
     public Long getSpeed() {
@@ -183,17 +182,17 @@ public class TrafficMeasurements implements Serializable {
         this.speed = speed;
     }
 
-    public Long getVehicleCount() {
-        return vehicleCount;
+    public Long getVehicle_count() {
+        return vehicle_count;
     }
 
-    public TrafficMeasurements vehicleCount(Long vehicleCount) {
-        this.vehicleCount = vehicleCount;
+    public TrafficMeasurements vehicle_count(Long vehicle_count) {
+        this.vehicle_count = vehicle_count;
         return this;
     }
 
-    public void setVehicleCount(Long vehicleCount) {
-        this.vehicleCount = vehicleCount;
+    public void setVehicle_count(Long vehicle_count) {
+        this.vehicle_count = vehicle_count;
     }
 
     public ZonedDateTime getTimestamp() {
@@ -235,15 +234,15 @@ public class TrafficMeasurements implements Serializable {
         return "TrafficMeasurements{" +
             "id=" + getId() +
             ", startTime='" + getStartTime() + "'" +
-            ", endTime='" + getEndTime() + "'" +
-            ", assetUuid=" + getAssetUuid() +
-            ", assetDescription='" + getAssetDescription() + "'" +
-            ", eventType='" + getEventType() + "'" +
-            ", counterDirection=" + getCounterDirection() +
-            ", counterDirectionSpeed=" + getCounterDirectionSpeed() +
-            ", counterDirectionVehicleCount=" + getCounterDirectionVehicleCount() +
+            ", end_time='" + getEnd_time() + "'" +
+            ", asset_uuid=" + getAsset_uuid() +
+            ", asset_description='" + getAsset_description() + "'" +
+            ", event_type='" + getEvent_type() + "'" +
+            ", counter_direction=" + getCounter_direction() +
+            ", counter_direction_speed=" + getCounter_direction_speed() +
+            ", counter_direction_vehicle_count=" + getCounter_direction_vehicle_count() +
             ", speed=" + getSpeed() +
-            ", vehicleCount=" + getVehicleCount() +
+            ", vehicle_count=" + getVehicle_count() +
             ", timestamp='" + getTimestamp() + "'" +
             "}";
     }

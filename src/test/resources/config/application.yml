@@ -13,23 +13,17 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
-eureka:
-    client:
-        enabled: true
-    instance:
-        appname: rearview_final1
-        instanceId: rearview_final1:${spring.application.instance-id:${random.value}}
 
 spring:
     application:
-        name: rearview_final1
+        name: sscapp
     jackson:
         serialization.write_dates_as_timestamps: false
     cache:
-        type: simple
+        type: none
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:mem:rearview_final1;DB_CLOSE_DELAY=-1
+        url: jdbc:h2:mem:sscapp;DB_CLOSE_DELAY=-1
         name:
         username:
         password:
@@ -61,6 +55,10 @@ spring:
 
 liquibase:
     contexts: test
+
+security:
+    basic:
+        enabled: false
 
 server:
     port: 10344
@@ -94,7 +92,7 @@ jhipster:
     security:
         authentication:
             jwt:
-                secret: 734407e40fce8ecfd9ca8bf2c8cdb4a1dfd8ac11
+                secret: f34bc355049a643a215d9a55e4b747ba74ba5359
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration

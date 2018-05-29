@@ -1,0 +1,36 @@
+{
+    "sscappApp": {
+        "appointment" : {
+            "home": {
+                "title": "Appointments",
+                "createLabel": "Crear nuevo Appointment",
+                "createOrEditLabel": "Crear o editar Appointment"
+            },
+            "created": "Un nuevo Appointment ha sido creado con el identificador {{ param }}",
+            "updated": "Un Appointment ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Appointment ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Appointment {{ id }}?"
+            },
+            "detail": {
+                "title": "Appointment"
+            },
+            "title": "Title",
+            "startsAt": "Starts At",
+            "endsAt": "Ends At",
+            "remarks": "Remarks",
+            "recursOn": "Recurs On",
+            "draggable": "Draggable",
+            "resizable": "Resizable",
+            "incrementsBadgeTotal": "Increments Badge Total",
+            "allDay": "All Day",
+            "student": "Student",
+            "advisor": "Advisor",
+            "color": "Color",
+            "type": "Type",
+            "semester": "Semester",
+            "note": "Note",
+            "notification": "Notification"
+        }
+    }
+}

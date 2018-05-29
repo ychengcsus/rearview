@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .factory('Base64', Base64);
 
     function Base64 () {

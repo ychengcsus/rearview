@@ -1,50 +1,50 @@
 
 <div>
-    <h2><span>Traffic Measurements</span> {{vm.trafficMeasurements.id}}</h2>
+    <h2><span data-translate="sscappApp.trafficMeasurements.detail.title">Traffic Measurements</span> {{vm.trafficMeasurements.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="dl-horizontal jh-entity-details">
-        <dt><span>Start Time</span></dt>
+        <dt><span data-translate="sscappApp.trafficMeasurements.startTime">Start Time</span></dt>
         <dd>
             <span>{{vm.trafficMeasurements.startTime | date:'medium'}}</span>
         </dd>
-        <dt><span>End Time</span></dt>
+        <dt><span data-translate="sscappApp.trafficMeasurements.end_time">End Time</span></dt>
         <dd>
-            <span>{{vm.trafficMeasurements.endTime | date:'medium'}}</span>
+            <span>{{vm.trafficMeasurements.end_time | date:'medium'}}</span>
         </dd>
-        <dt><span>Asset Uuid</span></dt>
+        <dt><span data-translate="sscappApp.trafficMeasurements.asset_uuid">Asset Uuid</span></dt>
         <dd>
-            <span>{{vm.trafficMeasurements.assetUuid}}</span>
+            <span>{{vm.trafficMeasurements.asset_uuid}}</span>
         </dd>
-        <dt><span>Asset Description</span></dt>
+        <dt><span data-translate="sscappApp.trafficMeasurements.asset_description">Asset Description</span></dt>
         <dd>
-            <span>{{vm.trafficMeasurements.assetDescription}}</span>
+            <span>{{vm.trafficMeasurements.asset_description}}</span>
         </dd>
-        <dt><span>Event Type</span></dt>
+        <dt><span data-translate="sscappApp.trafficMeasurements.event_type">Event Type</span></dt>
         <dd>
-            <span>{{vm.trafficMeasurements.eventType}}</span>
+            <span>{{vm.trafficMeasurements.event_type}}</span>
         </dd>
-        <dt><span>Counter Direction</span></dt>
+        <dt><span data-translate="sscappApp.trafficMeasurements.counter_direction">Counter Direction</span></dt>
         <dd>
-            <span>{{vm.trafficMeasurements.counterDirection}}</span>
+            <span>{{vm.trafficMeasurements.counter_direction}}</span>
         </dd>
-        <dt><span>Counter Direction Speed</span></dt>
+        <dt><span data-translate="sscappApp.trafficMeasurements.counter_direction_speed">Counter Direction Speed</span></dt>
         <dd>
-            <span>{{vm.trafficMeasurements.counterDirectionSpeed}}</span>
+            <span>{{vm.trafficMeasurements.counter_direction_speed}}</span>
         </dd>
-        <dt><span>Counter Direction Vehicle Count</span></dt>
+        <dt><span data-translate="sscappApp.trafficMeasurements.counter_direction_vehicle_count">Counter Direction Vehicle Count</span></dt>
         <dd>
-            <span>{{vm.trafficMeasurements.counterDirectionVehicleCount}}</span>
+            <span>{{vm.trafficMeasurements.counter_direction_vehicle_count}}</span>
         </dd>
-        <dt><span>Speed</span></dt>
+        <dt><span data-translate="sscappApp.trafficMeasurements.speed">Speed</span></dt>
         <dd>
             <span>{{vm.trafficMeasurements.speed}}</span>
         </dd>
-        <dt><span>Vehicle Count</span></dt>
+        <dt><span data-translate="sscappApp.trafficMeasurements.vehicle_count">Vehicle Count</span></dt>
         <dd>
-            <span>{{vm.trafficMeasurements.vehicleCount}}</span>
+            <span>{{vm.trafficMeasurements.vehicle_count}}</span>
         </dd>
-        <dt><span>Timestamp</span></dt>
+        <dt><span data-translate="sscappApp.trafficMeasurements.timestamp">Timestamp</span></dt>
         <dd>
             <span>{{vm.trafficMeasurements.timestamp | date:'medium'}}</span>
         </dd>
@@ -53,11 +53,11 @@
     <button type="submit"
             ui-sref="{{ vm.previousState }}"
             class="btn btn-info">
-        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
     </button>
 
     <button type="button" ui-sref="traffic-measurements-detail.edit({id:vm.trafficMeasurements.id})" class="btn btn-primary">
         <span class="glyphicon glyphicon-pencil"></span>
-        <span class="hidden-sm-down"> Edit</span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
     </button>
 </div>

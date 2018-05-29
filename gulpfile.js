@@ -1,4 +1,4 @@
-// Generated on 2018-04-21 using generator-jhipster 4.14.1
+// Generated on 2017-11-11 using generator-jhipster 4.10.2
 'use strict';
 
 var gulp = require('gulp'),
@@ -9,17 +9,13 @@ var gulp = require('gulp'),
     ngConstant = require('gulp-ng-constant'),
     rename = require('gulp-rename'),
     eslint = require('gulp-eslint'),
-    argv = require('yargs').argv,
-    gutil = require('gulp-util'),
-    protractor = require('gulp-protractor').protractor,
     del = require('del'),
     runSequence = require('run-sequence'),
     browserSync = require('browser-sync'),
     KarmaServer = require('karma').Server,
     plumber = require('gulp-plumber'),
     changed = require('gulp-changed'),
-    gulpIf = require('gulp-if'),
-    wbBuild = require('workbox-build');
+    gulpIf = require('gulp-if');
 
 var handleErrors = require('./gulp/handle-errors'),
     serve = require('./gulp/serve'),
@@ -34,7 +30,11 @@ gulp.task('clean', function () {
     return del([config.dist], { dot: true });
 });
 
-gulp.task('copy', ['copy:fonts', 'copy:common']);
+gulp.task('copy', ['copy:i18n', 'copy:fonts', 'copy:common']);
+
+gulp.task('copy:i18n', copy.i18n);
+
+gulp.task('copy:languages', copy.languages);
 
 gulp.task('copy:fonts', copy.fonts);
 
@@ -85,7 +85,7 @@ gulp.task('html', function () {
     return gulp.src(config.app + 'app/**/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(templateCache({
-            module: 'rearviewFinal1App',
+            module: 'sscappApp',
             root: 'app/',
             moduleSystem: 'IIFE'
         }))
@@ -94,7 +94,7 @@ gulp.task('html', function () {
 
 gulp.task('ngconstant:dev', function () {
     return ngConstant({
-        name: 'rearviewFinal1App',
+        name: 'sscappApp',
         constants: {
             VERSION: util.parseVersion(),
             DEBUG_INFO_ENABLED: true,
@@ -109,7 +109,7 @@ gulp.task('ngconstant:dev', function () {
 
 gulp.task('ngconstant:prod', function () {
     return ngConstant({
-        name: 'rearviewFinal1App',
+        name: 'sscappApp',
         constants: {
             VERSION: util.parseVersion(),
             DEBUG_INFO_ENABLED: false,
@@ -149,24 +149,6 @@ gulp.task('test', ['inject:test', 'ngconstant:dev'], function (done) {
     }, done).start();
 });
 
-/* to run individual suites pass `gulp itest --suite suiteName` */
-gulp.task('protractor', function () {
-    var configObj = {
-        configFile: config.test + 'protractor.conf.js'
-    };
-    if (argv.suite) {
-        configObj['args'] = ['--suite', argv.suite];
-    }
-    return gulp.src([])
-        .pipe(plumber({errorHandler: handleErrors}))
-        .pipe(protractor(configObj))
-        .on('error', function () {
-            gutil.log('E2E Tests failed');
-            process.exit(1);
-        });
-});
-
-gulp.task('itest', ['protractor']);
 
 gulp.task('watch', function () {
     gulp.watch('bower.json', ['install']);
@@ -178,27 +160,13 @@ gulp.task('watch', function () {
 });
 
 gulp.task('install', function () {
-    runSequence(['inject:dep', 'ngconstant:dev'], 'inject:app', 'inject:troubleshoot');
+    runSequence(['inject:dep', 'ngconstant:dev'], 'copy:languages', 'inject:app', 'inject:troubleshoot');
 });
 
 gulp.task('serve', ['install'], serve);
 
 gulp.task('build', ['clean'], function (cb) {
-    runSequence(['copy', 'inject:vendor', 'ngconstant:prod'], 'inject:app', 'inject:troubleshoot', 'assets:prod', 'bundle-sw');
+    runSequence(['copy', 'inject:vendor', 'ngconstant:prod', 'copy:languages'], 'inject:app', 'inject:troubleshoot', 'assets:prod', cb);
 });
 
 gulp.task('default', ['serve']);
-
-gulp.task('bundle-sw', () => {
-  return wbBuild.generateSW({
-    globDirectory: config.dist,
-    swDest: `${config.dist}/sw.js`,
-    globPatterns: ['**\/*.{html,js,css,png,svg,jpg,gif,json}'],
-  })
-  .then(() => {
-    console.log('Service worker generated.');
-  })
-  .catch((err) => {
-    console.log('[ERROR] This happened: ' + err);
-  });
-})

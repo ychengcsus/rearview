@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .controller('GeoLocationInformationController', GeoLocationInformationController);
 
     GeoLocationInformationController.$inject = ['$state', 'GeoLocationInformation', 'ParseLinks', 'AlertService', 'paginationConstants', 'pagingParams'];

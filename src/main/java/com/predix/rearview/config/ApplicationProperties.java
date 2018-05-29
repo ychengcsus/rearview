@@ -1,9 +1,9 @@
-package com.predix.rearview.config;
+package edu.four04.sscapp.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * Properties specific to Rearview Final 1.
+ * Properties specific to Sscapp.
  * <p>
  * Properties are configured in the application.yml file.
  * See {@link io.github.jhipster.config.JHipsterProperties} for a good example.

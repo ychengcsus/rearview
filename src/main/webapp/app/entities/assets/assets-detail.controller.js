@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .controller('AssetsDetailController', AssetsDetailController);
 
     AssetsDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Assets'];
@@ -13,7 +13,7 @@
         vm.assets = entity;
         vm.previousState = previousState.name;
 
-        var unsubscribe = $rootScope.$on('rearviewFinal1App:assetsUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('sscappApp:assetsUpdate', function(event, result) {
             vm.assets = result;
         });
         $scope.$on('$destroy', unsubscribe);

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .factory('PasswordResetInit', PasswordResetInit);
 
     PasswordResetInit.$inject = ['$resource'];

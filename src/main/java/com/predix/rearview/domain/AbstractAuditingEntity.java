@@ -1,4 +1,4 @@
-package com.predix.rearview.domain;
+package edu.four04.sscapp.domain;
 
 import java.io.Serializable;
 

@@ -1,11 +1,12 @@
-package com.predix.rearview.web.rest;
+package edu.four04.sscapp.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
-import com.predix.rearview.service.TrafficMeasurementsService;
-import com.predix.rearview.web.rest.errors.BadRequestAlertException;
-import com.predix.rearview.web.rest.util.HeaderUtil;
-import com.predix.rearview.web.rest.util.PaginationUtil;
-import com.predix.rearview.service.dto.TrafficMeasurementsDTO;
+import edu.four04.sscapp.domain.TrafficMeasurements;
+
+import edu.four04.sscapp.repository.TrafficMeasurementsRepository;
+import edu.four04.sscapp.web.rest.errors.BadRequestAlertException;
+import edu.four04.sscapp.web.rest.util.HeaderUtil;
+import edu.four04.sscapp.web.rest.util.PaginationUtil;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,27 +34,27 @@ public class TrafficMeasurementsResource {
 
     private static final String ENTITY_NAME = "trafficMeasurements";
 
-    private final TrafficMeasurementsService trafficMeasurementsService;
+    private final TrafficMeasurementsRepository trafficMeasurementsRepository;
 
-    public TrafficMeasurementsResource(TrafficMeasurementsService trafficMeasurementsService) {
-        this.trafficMeasurementsService = trafficMeasurementsService;
+    public TrafficMeasurementsResource(TrafficMeasurementsRepository trafficMeasurementsRepository) {
+        this.trafficMeasurementsRepository = trafficMeasurementsRepository;
     }
 
     /**
      * POST  /traffic-measurements : Create a new trafficMeasurements.
      *
-     * @param trafficMeasurementsDTO the trafficMeasurementsDTO to create
-     * @return the ResponseEntity with status 201 (Created) and with body the new trafficMeasurementsDTO, or with status 400 (Bad Request) if the trafficMeasurements has already an ID
+     * @param trafficMeasurements the trafficMeasurements to create
+     * @return the ResponseEntity with status 201 (Created) and with body the new trafficMeasurements, or with status 400 (Bad Request) if the trafficMeasurements has already an ID
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
     @PostMapping("/traffic-measurements")
     @Timed
-    public ResponseEntity<TrafficMeasurementsDTO> createTrafficMeasurements(@RequestBody TrafficMeasurementsDTO trafficMeasurementsDTO) throws URISyntaxException {
-        log.debug("REST request to save TrafficMeasurements : {}", trafficMeasurementsDTO);
-        if (trafficMeasurementsDTO.getId() != null) {
+    public ResponseEntity<TrafficMeasurements> createTrafficMeasurements(@RequestBody TrafficMeasurements trafficMeasurements) throws URISyntaxException {
+        log.debug("REST request to save TrafficMeasurements : {}", trafficMeasurements);
+        if (trafficMeasurements.getId() != null) {
             throw new BadRequestAlertException("A new trafficMeasurements cannot already have an ID", ENTITY_NAME, "idexists");
         }
-        TrafficMeasurementsDTO result = trafficMeasurementsService.save(trafficMeasurementsDTO);
+        TrafficMeasurements result = trafficMeasurementsRepository.save(trafficMeasurements);
         return ResponseEntity.created(new URI("/api/traffic-measurements/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
             .body(result);
@@ -62,22 +63,22 @@ public class TrafficMeasurementsResource {
     /**
      * PUT  /traffic-measurements : Updates an existing trafficMeasurements.
      *
-     * @param trafficMeasurementsDTO the trafficMeasurementsDTO to update
-     * @return the ResponseEntity with status 200 (OK) and with body the updated trafficMeasurementsDTO,
-     * or with status 400 (Bad Request) if the trafficMeasurementsDTO is not valid,
-     * or with status 500 (Internal Server Error) if the trafficMeasurementsDTO couldn't be updated
+     * @param trafficMeasurements the trafficMeasurements to update
+     * @return the ResponseEntity with status 200 (OK) and with body the updated trafficMeasurements,
+     * or with status 400 (Bad Request) if the trafficMeasurements is not valid,
+     * or with status 500 (Internal Server Error) if the trafficMeasurements couldn't be updated
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
     @PutMapping("/traffic-measurements")
     @Timed
-    public ResponseEntity<TrafficMeasurementsDTO> updateTrafficMeasurements(@RequestBody TrafficMeasurementsDTO trafficMeasurementsDTO) throws URISyntaxException {
-        log.debug("REST request to update TrafficMeasurements : {}", trafficMeasurementsDTO);
-        if (trafficMeasurementsDTO.getId() == null) {
-            return createTrafficMeasurements(trafficMeasurementsDTO);
+    public ResponseEntity<TrafficMeasurements> updateTrafficMeasurements(@RequestBody TrafficMeasurements trafficMeasurements) throws URISyntaxException {
+        log.debug("REST request to update TrafficMeasurements : {}", trafficMeasurements);
+        if (trafficMeasurements.getId() == null) {
+            return createTrafficMeasurements(trafficMeasurements);
         }
-        TrafficMeasurementsDTO result = trafficMeasurementsService.save(trafficMeasurementsDTO);
+        TrafficMeasurements result = trafficMeasurementsRepository.save(trafficMeasurements);
         return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, trafficMeasurementsDTO.getId().toString()))
+            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, trafficMeasurements.getId().toString()))
             .body(result);
     }
 
@@ -89,9 +90,9 @@ public class TrafficMeasurementsResource {
      */
     @GetMapping("/traffic-measurements")
     @Timed
-    public ResponseEntity<List<TrafficMeasurementsDTO>> getAllTrafficMeasurements(Pageable pageable) {
+    public ResponseEntity<List<TrafficMeasurements>> getAllTrafficMeasurements(Pageable pageable) {
         log.debug("REST request to get a page of TrafficMeasurements");
-        Page<TrafficMeasurementsDTO> page = trafficMeasurementsService.findAll(pageable);
+        Page<TrafficMeasurements> page = trafficMeasurementsRepository.findAll(pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/traffic-measurements");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
@@ -99,28 +100,28 @@ public class TrafficMeasurementsResource {
     /**
      * GET  /traffic-measurements/:id : get the "id" trafficMeasurements.
      *
-     * @param id the id of the trafficMeasurementsDTO to retrieve
-     * @return the ResponseEntity with status 200 (OK) and with body the trafficMeasurementsDTO, or with status 404 (Not Found)
+     * @param id the id of the trafficMeasurements to retrieve
+     * @return the ResponseEntity with status 200 (OK) and with body the trafficMeasurements, or with status 404 (Not Found)
      */
     @GetMapping("/traffic-measurements/{id}")
     @Timed
-    public ResponseEntity<TrafficMeasurementsDTO> getTrafficMeasurements(@PathVariable Long id) {
+    public ResponseEntity<TrafficMeasurements> getTrafficMeasurements(@PathVariable Long id) {
         log.debug("REST request to get TrafficMeasurements : {}", id);
-        TrafficMeasurementsDTO trafficMeasurementsDTO = trafficMeasurementsService.findOne(id);
-        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(trafficMeasurementsDTO));
+        TrafficMeasurements trafficMeasurements = trafficMeasurementsRepository.findOne(id);
+        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(trafficMeasurements));
     }
 
     /**
      * DELETE  /traffic-measurements/:id : delete the "id" trafficMeasurements.
      *
-     * @param id the id of the trafficMeasurementsDTO to delete
+     * @param id the id of the trafficMeasurements to delete
      * @return the ResponseEntity with status 200 (OK)
      */
     @DeleteMapping("/traffic-measurements/{id}")
     @Timed
     public ResponseEntity<Void> deleteTrafficMeasurements(@PathVariable Long id) {
         log.debug("REST request to delete TrafficMeasurements : {}", id);
-        trafficMeasurementsService.delete(id);
+        trafficMeasurementsRepository.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
     }
 }

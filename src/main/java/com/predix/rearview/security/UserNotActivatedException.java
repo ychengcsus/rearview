@@ -1,4 +1,4 @@
-package com.predix.rearview.security;
+package edu.four04.sscapp.security;
 
 import org.springframework.security.core.AuthenticationException;
 

@@ -4,71 +4,71 @@
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="vm.clear()">&times;</button>
-        <h4 class="modal-title" id="myAssetsLabel">Create or edit a Assets</h4>
+        <h4 class="modal-title" id="myAssetsLabel" data-translate="sscappApp.assets.home.createOrEditLabel">Create or edit a Assets</h4>
     </div>
     <div class="modal-body">
         <jhi-alert-error></jhi-alert-error>
         <div class="form-group" ng-show="vm.assets.id">
-            <label for="id">ID</label>
+            <label for="id" data-translate="global.field.id">ID</label>
             <input type="text" class="form-control" id="id" name="id"
                     ng-model="vm.assets.id" readonly />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_assetUuid">Asset Uuid</label>
+            <label class="control-label" data-translate="sscappApp.assets.assetUuid" for="field_assetUuid">Asset Uuid</label>
             <input type="number" class="form-control" name="assetUuid" id="field_assetUuid"
                     ng-model="vm.assets.assetUuid"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_description">Description</label>
+            <label class="control-label" data-translate="sscappApp.assets.description" for="field_description">Description</label>
             <input type="text" class="form-control" name="description" id="field_description"
                     ng-model="vm.assets.description"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_properties">Properties</label>
+            <label class="control-label" data-translate="sscappApp.assets.properties" for="field_properties">Properties</label>
             <input type="text" class="form-control" name="properties" id="field_properties"
                     ng-model="vm.assets.properties"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_status">Status</label>
+            <label class="control-label" data-translate="sscappApp.assets.status" for="field_status">Status</label>
             <input type="text" class="form-control" name="status" id="field_status"
                     ng-model="vm.assets.status"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_assetType">Asset Type</label>
+            <label class="control-label" data-translate="sscappApp.assets.assetType" for="field_assetType">Asset Type</label>
             <input type="text" class="form-control" name="assetType" id="field_assetType"
                     ng-model="vm.assets.assetType"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_mediaType">Media Type</label>
+            <label class="control-label" data-translate="sscappApp.assets.mediaType" for="field_mediaType">Media Type</label>
             <input type="text" class="form-control" name="mediaType" id="field_mediaType"
                     ng-model="vm.assets.mediaType"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_eventTypes">Event Types</label>
+            <label class="control-label" data-translate="sscappApp.assets.eventTypes" for="field_eventTypes">Event Types</label>
             <input type="text" class="form-control" name="eventTypes" id="field_eventTypes"
                     ng-model="vm.assets.eventTypes"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_coordinates">Coordinates</label>
-            <input type="text" class="form-control" name="coordinates" id="field_coordinates"
+            <label class="control-label" data-translate="sscappApp.assets.coordinates" for="field_coordinates">Coordinates</label>
+            <input type="number" class="form-control" name="coordinates" id="field_coordinates"
                     ng-model="vm.assets.coordinates"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_parentAssetUuid">Parent Asset Uuid</label>
+            <label class="control-label" data-translate="sscappApp.assets.parentAssetUuid" for="field_parentAssetUuid">Parent Asset Uuid</label>
             <input type="number" class="form-control" name="parentAssetUuid" id="field_parentAssetUuid"
                     ng-model="vm.assets.parentAssetUuid"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_assetCreationDate">Asset Creation Date</label>
+            <label class="control-label" data-translate="sscappApp.assets.assetCreationDate" for="field_assetCreationDate">Asset Creation Date</label>
                 <div class="input-group">
                     <input id="field_assetCreationDate" type="text" class="form-control" name="assetCreationDate" datetime-picker="{{dateformat}}" ng-model="vm.assets.assetCreationDate" is-open="vm.datePickerOpenStatus.assetCreationDate"
                     />
@@ -78,7 +78,7 @@
                 </div>
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_assetToLocationId">Asset To Location Id</label>
+            <label class="control-label" data-translate="sscappApp.assets.assetToLocationId" for="field_assetToLocationId">Asset To Location Id</label>
             <input type="number" class="form-control" name="assetToLocationId" id="field_assetToLocationId"
                     ng-model="vm.assets.assetToLocationId"
                     />
@@ -87,10 +87,10 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
-            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
         </button>
         <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
-            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
         </button>
     </div>
 </form>

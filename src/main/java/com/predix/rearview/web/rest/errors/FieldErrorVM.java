@@ -1,4 +1,4 @@
-package com.predix.rearview.web.rest.errors;
+package edu.four04.sscapp.web.rest.errors;
 
 import java.io.Serializable;
 

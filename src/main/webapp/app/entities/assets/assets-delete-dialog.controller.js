@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .controller('AssetsDeleteController',AssetsDeleteController);
 
     AssetsDeleteController.$inject = ['$uibModalInstance', 'entity', 'Assets'];

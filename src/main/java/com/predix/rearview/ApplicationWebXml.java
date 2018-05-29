@@ -1,6 +1,6 @@
-package com.predix.rearview;
+package edu.four04.sscapp;
 
-import com.predix.rearview.config.DefaultProfileUtil;
+import edu.four04.sscapp.config.DefaultProfileUtil;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
@@ -16,6 +16,6 @@ public class ApplicationWebXml extends SpringBootServletInitializer {
          * set a default to use when no profile is configured.
          */
         DefaultProfileUtil.addDefaultProfile(application.application());
-        return application.sources(RearviewFinal1App.class);
+        return application.sources(SscappApp.class);
     }
 }

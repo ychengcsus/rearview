@@ -1,6 +1,6 @@
-package com.predix.rearview.web.rest;
+package edu.four04.sscapp.web.rest;
 
-import com.predix.rearview.config.DefaultProfileUtil;
+import edu.four04.sscapp.config.DefaultProfileUtil;
 
 import io.github.jhipster.config.JHipsterProperties;
 

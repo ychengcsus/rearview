@@ -1,4 +1,4 @@
 /**
  * JPA domain objects.
  */
-package com.predix.rearview.domain;
+package edu.four04.sscapp.domain;

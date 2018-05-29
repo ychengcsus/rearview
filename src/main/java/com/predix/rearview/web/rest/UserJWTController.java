@@ -1,8 +1,8 @@
-package com.predix.rearview.web.rest;
+package edu.four04.sscapp.web.rest;
 
-import com.predix.rearview.security.jwt.JWTConfigurer;
-import com.predix.rearview.security.jwt.TokenProvider;
-import com.predix.rearview.web.rest.vm.LoginVM;
+import edu.four04.sscapp.security.jwt.JWTConfigurer;
+import edu.four04.sscapp.security.jwt.TokenProvider;
+import edu.four04.sscapp.web.rest.vm.LoginVM;
 
 import com.codahale.metrics.annotation.Timed;
 import com.fasterxml.jackson.annotation.JsonProperty;

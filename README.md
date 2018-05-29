@@ -1,5 +1,5 @@
-# rearview_final1
-This application was generated using JHipster 4.14.1, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.14.1](http://www.jhipster.tech/documentation-archive/v4.14.1).
+# sscapp
+This application was generated using JHipster 4.10.2, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.10.2](http://www.jhipster.tech/documentation-archive/v4.10.2).
 
 ## Development
 
@@ -35,7 +35,7 @@ For further instructions on how to develop with JHipster, have a look at [Using 
 
 ## Building for production
 
-To optimize the rearview_final1 application for production, run:
+To optimize the sscapp application for production, run:
 
     ./mvnw -Pprod clean package
 
@@ -60,27 +60,30 @@ Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in
 
     gulp test
 
-UI end-to-end tests are powered by [Protractor][], which is built on top of WebDriverJS. They're located in [src/test/javascript/e2e](src/test/javascript/e2e)
-and can be run by starting Spring Boot in one terminal (`./mvnw spring-boot:run`) and running the tests (`gulp itest`) in a second one.
+
+### Other tests
+
+Performance tests are run by [Gatling][] and written in Scala. They're located in [src/test/gatling](src/test/gatling) and can be run with:
+
+    ./mvnw gatling:execute
 
 For more information, refer to the [Running tests page][].
 
 ## Using Docker to simplify development (optional)
 
 You can use Docker to improve your JHipster development experience. A number of docker-compose configuration are available in the [src/main/docker](src/main/docker) folder to launch required third party services.
+For example, to start a mysql database in a docker container, run:
 
-For example, to start a postgresql database in a docker container, run:
-
-    docker-compose -f src/main/docker/postgresql.yml up -d
+    docker-compose -f src/main/docker/mysql.yml up -d
 
 To stop it and remove the container, run:
 
-    docker-compose -f src/main/docker/postgresql.yml down
+    docker-compose -f src/main/docker/mysql.yml down
 
 You can also fully dockerize your application and all the services that it depends on.
 To achieve this, first build a docker image of your app by running:
 
-    ./mvnw verify -Pprod dockerfile:build
+    ./mvnw package -Pprod dockerfile:build
 
 Then run:
 
@@ -93,16 +96,15 @@ For more information refer to [Using Docker and Docker-Compose][], this page als
 To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`), this will let you generate configuration files for a number of Continuous Integration systems. Consult the [Setting up Continuous Integration][] page for more information.
 
 [JHipster Homepage and latest documentation]: http://www.jhipster.tech
-[JHipster 4.14.1 archive]: http://www.jhipster.tech/documentation-archive/v4.14.1
+[JHipster 4.10.2 archive]: http://www.jhipster.tech/documentation-archive/v4.10.2
 
-[Using JHipster in development]: http://www.jhipster.tech/documentation-archive/v4.14.1/development/
-[Service Discovery and Configuration with the JHipster-Registry]: http://www.jhipster.tech/documentation-archive/v4.14.1/microservices-architecture/#jhipster-registry
-[Using Docker and Docker-Compose]: http://www.jhipster.tech/documentation-archive/v4.14.1/docker-compose
-[Using JHipster in production]: http://www.jhipster.tech/documentation-archive/v4.14.1/production/
-[Running tests page]: http://www.jhipster.tech/documentation-archive/v4.14.1/running-tests/
-[Setting up Continuous Integration]: http://www.jhipster.tech/documentation-archive/v4.14.1/setting-up-ci/
+[Using JHipster in development]: http://www.jhipster.tech/documentation-archive/v4.10.2/development/
+[Using Docker and Docker-Compose]: http://www.jhipster.tech/documentation-archive/v4.10.2/docker-compose
+[Using JHipster in production]: http://www.jhipster.tech/documentation-archive/v4.10.2/production/
+[Running tests page]: http://www.jhipster.tech/documentation-archive/v4.10.2/running-tests/
+[Setting up Continuous Integration]: http://www.jhipster.tech/documentation-archive/v4.10.2/setting-up-ci/
 
-
+[Gatling]: http://gatling.io/
 [Node.js]: https://nodejs.org/
 [Yarn]: https://yarnpkg.org/
 [Bower]: http://bower.io/

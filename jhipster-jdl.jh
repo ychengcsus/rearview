@@ -1,0 +1,77 @@
+
+entity Appointment {
+	title String,
+    startsAt ZonedDateTime,
+    endsAt ZonedDateTime,
+    remarks TextBlob,
+    recursOn String,
+    draggable Boolean,
+    resizable Boolean,
+    incrementsBadgeTotal Boolean,
+    allDay Boolean
+}
+
+relationship ManyToOne {
+	Appointment{advisor} to User
+}
+
+relationship OneToOne {
+	Appointment{student} to User
+}
+
+entity AppointmentColor {
+	primary String,
+    secondary String
+}
+
+relationship ManyToOne {
+	Appointment{color} to AppointmentColor,
+    Appointment{type(title)} to AppointmentType,
+    Appointment{semester} to Semester{appointments}
+}
+
+entity AppointmentType {
+	title String,
+    defaultDuration Integer
+}
+
+entity Semester {
+	seasonalName String,
+    year Integer
+}
+
+entity Note {
+	remarks TextBlob,
+    date ZonedDateTime,
+}
+
+relationship OneToOne {
+	Note{appointment} to Appointment{note}
+}
+
+relationship ManyToOne {
+    Note{advisor} to User
+}
+
+entity Notification {
+	currentStatus String,
+    prevStatus String
+}
+
+relationship OneToOne {
+	Notification{appointment} to Appointment{notification}
+}
+
+entity Notebook {
+}
+
+relationship OneToOne {
+	Notebook{student} to User
+}
+
+relationship ManyToOne {
+	Note{notebook} to Notebook{notes(date)}
+}
+
+paginate Appointment with infinite-scroll
+paginate Note with infinite-scroll

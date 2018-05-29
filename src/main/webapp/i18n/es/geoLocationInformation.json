@@ -1,0 +1,33 @@
+
+{
+    "sscappApp": {
+        "geoLocationInformation" : {
+            "home": {
+                "title": "Geo Location Informations",
+                "createLabel": "Crear nuevo Geo Location Information",
+                "createOrEditLabel": "Crear o editar Geo Location Information"
+            },
+            "created": "Un nuevo Geo Location Information ha sido creado con el identificador {{ param }}",
+            "updated": "Un Geo Location Information ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Geo Location Information ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Geo Location Information {{ id }}?"
+            },
+            "detail": {
+                "title": "Geo Location Information"
+            },
+            "locationUuid": "Location Uuid",
+            "locationType": "Location Type",
+            "parentLocationUuid": "Parent Location Uuid",
+            "coordinatesType": "Coordinates Type",
+            "coordinates": "Coordinates",
+            "city": "City",
+            "state": "State",
+            "country": "Country",
+            "zipcode": "Zipcode",
+            "timezone": "Timezone",
+            "address": "Address",
+            "analyticCategory": "Analytic Category"
+        }
+    }
+}

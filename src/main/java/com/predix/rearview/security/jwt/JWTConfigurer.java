@@ -1,4 +1,4 @@
-package com.predix.rearview.security.jwt;
+package edu.four04.sscapp.security.jwt;
 
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

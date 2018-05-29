@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('rearviewFinal1App')
+    angular.module('sscappApp')
         .controller('HealthModalController', HealthModalController);
 
     HealthModalController.$inject = ['$uibModalInstance', 'currentHealth', 'baseName', 'subSystemName'];

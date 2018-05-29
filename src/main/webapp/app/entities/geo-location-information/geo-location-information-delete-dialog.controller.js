@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .controller('GeoLocationInformationDeleteController',GeoLocationInformationDeleteController);
 
     GeoLocationInformationDeleteController.$inject = ['$uibModalInstance', 'entity', 'GeoLocationInformation'];

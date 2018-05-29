@@ -1,4 +1,4 @@
-package com.predix.rearview.domain;
+package edu.four04.sscapp.domain;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -16,7 +16,6 @@ import java.io.Serializable;
 @Entity
 @Table(name = "jhi_authority")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-
 public class Authority implements Serializable {
 
     private static final long serialVersionUID = 1L;

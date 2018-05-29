@@ -1,6 +1,6 @@
-package com.predix.rearview.web.rest.errors;
+package edu.four04.sscapp.web.rest.errors;
 
-import com.predix.rearview.web.rest.util.HeaderUtil;
+import edu.four04.sscapp.web.rest.util.HeaderUtil;
 
 import org.springframework.dao.ConcurrencyFailureException;
 import org.springframework.http.ResponseEntity;

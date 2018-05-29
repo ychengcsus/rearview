@@ -1,8 +1,8 @@
-package com.predix.rearview.repository;
+package edu.four04.sscapp.repository;
 
-import com.predix.rearview.config.Constants;
-import com.predix.rearview.config.audit.AuditEventConverter;
-import com.predix.rearview.domain.PersistentAuditEvent;
+import edu.four04.sscapp.config.Constants;
+import edu.four04.sscapp.config.audit.AuditEventConverter;
+import edu.four04.sscapp.domain.PersistentAuditEvent;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,0 +1,32 @@
+
+{
+    "sscappApp": {
+        "trafficMeasurements" : {
+            "home": {
+                "title": "Traffic Measurements",
+                "createLabel": "Crear nuevo Traffic Measurements",
+                "createOrEditLabel": "Crear o editar Traffic Measurements"
+            },
+            "created": "Un nuevo Traffic Measurements ha sido creado con el identificador {{ param }}",
+            "updated": "Un Traffic Measurements ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Traffic Measurements ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Traffic Measurements {{ id }}?"
+            },
+            "detail": {
+                "title": "Traffic Measurements"
+            },
+            "startTime": "Start Time",
+            "end_time": "End Time",
+            "asset_uuid": "Asset Uuid",
+            "asset_description": "Asset Description",
+            "event_type": "Event Type",
+            "counter_direction": "Counter Direction",
+            "counter_direction_speed": "Counter Direction Speed",
+            "counter_direction_vehicle_count": "Counter Direction Vehicle Count",
+            "speed": "Speed",
+            "vehicle_count": "Vehicle Count",
+            "timestamp": "Timestamp"
+        }
+    }
+}

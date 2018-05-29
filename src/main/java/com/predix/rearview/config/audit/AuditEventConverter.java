@@ -1,6 +1,6 @@
-package com.predix.rearview.config.audit;
+package edu.four04.sscapp.config.audit;
 
-import com.predix.rearview.domain.PersistentAuditEvent;
+import edu.four04.sscapp.domain.PersistentAuditEvent;
 
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;

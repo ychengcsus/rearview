@@ -1,4 +1,4 @@
-package com.predix.rearview.web.rest.util;
+package edu.four04.sscapp.web.rest.util;
 
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpHeaders;

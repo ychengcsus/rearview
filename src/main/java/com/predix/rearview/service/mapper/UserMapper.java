@@ -1,8 +1,8 @@
-package com.predix.rearview.service.mapper;
+package edu.four04.sscapp.service.mapper;
 
-import com.predix.rearview.domain.Authority;
-import com.predix.rearview.domain.User;
-import com.predix.rearview.service.dto.UserDTO;
+import edu.four04.sscapp.domain.Authority;
+import edu.four04.sscapp.domain.User;
+import edu.four04.sscapp.service.dto.UserDTO;
 
 import org.springframework.stereotype.Service;
 
@@ -43,7 +43,7 @@ public class UserMapper {
             user.setActivated(userDTO.isActivated());
             user.setLangKey(userDTO.getLangKey());
             Set<Authority> authorities = this.authoritiesFromStrings(userDTO.getAuthorities());
-            if (authorities != null) {
+            if(authorities != null) {
                 user.setAuthorities(authorities);
             }
             return user;

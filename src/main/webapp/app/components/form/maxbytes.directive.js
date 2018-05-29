@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .directive('maxbytes', maxbytes);
 
     function maxbytes () {

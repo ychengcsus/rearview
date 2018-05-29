@@ -1,6 +1,6 @@
-package com.predix.rearview.web.rest;
+package edu.four04.sscapp.web.rest;
 
-import com.predix.rearview.web.rest.vm.LoggerVM;
+import edu.four04.sscapp.web.rest.vm.LoggerVM;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.LoggerContext;

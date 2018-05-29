@@ -1,6 +1,8 @@
-package com.predix.rearview.web.rest.vm;
+package edu.four04.sscapp.web.rest.vm;
 
+import edu.four04.sscapp.config.Constants;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 /**
@@ -8,6 +10,7 @@ import javax.validation.constraints.Size;
  */
 public class LoginVM {
 
+    @Pattern(regexp = Constants.LOGIN_REGEX)
     @NotNull
     @Size(min = 1, max = 50)
     private String username;

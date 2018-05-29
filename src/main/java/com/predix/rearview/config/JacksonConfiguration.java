@@ -1,4 +1,4 @@
-package com.predix.rearview.config;
+package edu.four04.sscapp.config;
 
 import com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module;
 import com.fasterxml.jackson.module.afterburner.AfterburnerModule;

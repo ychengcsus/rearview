@@ -2,13 +2,13 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .config(alertServiceConfig);
 
     alertServiceConfig.$inject = ['AlertServiceProvider'];
 
     function alertServiceConfig(AlertServiceProvider) {
         // set below to true to make alerts look like toast
-        AlertServiceProvider.showAsToast(false);
+        AlertServiceProvider.showAsToast(true);
     }
 })();

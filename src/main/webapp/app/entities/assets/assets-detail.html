@@ -1,50 +1,50 @@
 
 <div>
-    <h2><span>Assets</span> {{vm.assets.id}}</h2>
+    <h2><span data-translate="sscappApp.assets.detail.title">Assets</span> {{vm.assets.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="dl-horizontal jh-entity-details">
-        <dt><span>Asset Uuid</span></dt>
+        <dt><span data-translate="sscappApp.assets.assetUuid">Asset Uuid</span></dt>
         <dd>
             <span>{{vm.assets.assetUuid}}</span>
         </dd>
-        <dt><span>Description</span></dt>
+        <dt><span data-translate="sscappApp.assets.description">Description</span></dt>
         <dd>
             <span>{{vm.assets.description}}</span>
         </dd>
-        <dt><span>Properties</span></dt>
+        <dt><span data-translate="sscappApp.assets.properties">Properties</span></dt>
         <dd>
             <span>{{vm.assets.properties}}</span>
         </dd>
-        <dt><span>Status</span></dt>
+        <dt><span data-translate="sscappApp.assets.status">Status</span></dt>
         <dd>
             <span>{{vm.assets.status}}</span>
         </dd>
-        <dt><span>Asset Type</span></dt>
+        <dt><span data-translate="sscappApp.assets.assetType">Asset Type</span></dt>
         <dd>
             <span>{{vm.assets.assetType}}</span>
         </dd>
-        <dt><span>Media Type</span></dt>
+        <dt><span data-translate="sscappApp.assets.mediaType">Media Type</span></dt>
         <dd>
             <span>{{vm.assets.mediaType}}</span>
         </dd>
-        <dt><span>Event Types</span></dt>
+        <dt><span data-translate="sscappApp.assets.eventTypes">Event Types</span></dt>
         <dd>
             <span>{{vm.assets.eventTypes}}</span>
         </dd>
-        <dt><span>Coordinates</span></dt>
+        <dt><span data-translate="sscappApp.assets.coordinates">Coordinates</span></dt>
         <dd>
             <span>{{vm.assets.coordinates}}</span>
         </dd>
-        <dt><span>Parent Asset Uuid</span></dt>
+        <dt><span data-translate="sscappApp.assets.parentAssetUuid">Parent Asset Uuid</span></dt>
         <dd>
             <span>{{vm.assets.parentAssetUuid}}</span>
         </dd>
-        <dt><span>Asset Creation Date</span></dt>
+        <dt><span data-translate="sscappApp.assets.assetCreationDate">Asset Creation Date</span></dt>
         <dd>
             <span>{{vm.assets.assetCreationDate | date:'medium'}}</span>
         </dd>
-        <dt><span>Asset To Location Id</span></dt>
+        <dt><span data-translate="sscappApp.assets.assetToLocationId">Asset To Location Id</span></dt>
         <dd>
             <span>{{vm.assets.assetToLocationId}}</span>
         </dd>
@@ -53,11 +53,11 @@
     <button type="submit"
             ui-sref="{{ vm.previousState }}"
             class="btn btn-info">
-        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
     </button>
 
     <button type="button" ui-sref="assets-detail.edit({id:vm.assets.id})" class="btn btn-primary">
         <span class="glyphicon glyphicon-pencil"></span>
-        <span class="hidden-sm-down"> Edit</span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
     </button>
 </div>

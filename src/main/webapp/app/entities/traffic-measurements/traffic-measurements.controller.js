@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .controller('TrafficMeasurementsController', TrafficMeasurementsController);
 
     TrafficMeasurementsController.$inject = ['$state', 'TrafficMeasurements', 'ParseLinks', 'AlertService', 'paginationConstants', 'pagingParams'];

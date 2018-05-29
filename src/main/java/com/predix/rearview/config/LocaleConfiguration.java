@@ -1,4 +1,4 @@
-package com.predix.rearview.config;
+package edu.four04.sscapp.config;
 
 import io.github.jhipster.config.locale.AngularCookieLocaleResolver;
 

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .config(stateConfig);
 
     stateConfig.$inject = ['$stateProvider'];
@@ -14,7 +14,7 @@
             url: '/assets?page&sort&search',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'Assets'
+                pageTitle: 'sscappApp.assets.home.title'
             },
             views: {
                 'content@': {
@@ -44,6 +44,11 @@
                         search: $stateParams.search
                     };
                 }],
+                translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                    $translatePartialLoader.addPart('assets');
+                    $translatePartialLoader.addPart('global');
+                    return $translate.refresh();
+                }]
             }
         })
         .state('assets-detail', {
@@ -51,7 +56,7 @@
             url: '/assets/{id}',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'Assets'
+                pageTitle: 'sscappApp.assets.detail.title'
             },
             views: {
                 'content@': {
@@ -61,6 +66,10 @@
                 }
             },
             resolve: {
+                translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                    $translatePartialLoader.addPart('assets');
+                    return $translate.refresh();
+                }],
                 entity: ['$stateParams', 'Assets', function($stateParams, Assets) {
                     return Assets.get({id : $stateParams.id}).$promise;
                 }],

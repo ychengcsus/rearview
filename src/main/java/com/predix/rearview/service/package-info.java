@@ -1,4 +1,4 @@
 /**
  * Service layer beans.
  */
-package com.predix.rearview.service;
+package edu.four04.sscapp.service;

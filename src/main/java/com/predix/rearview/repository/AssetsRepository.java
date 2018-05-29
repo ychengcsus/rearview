@@ -1,6 +1,6 @@
-package com.predix.rearview.repository;
+package edu.four04.sscapp.repository;
 
-import com.predix.rearview.domain.Assets;
+import edu.four04.sscapp.domain.Assets;
 import org.springframework.stereotype.Repository;
 
 import org.springframework.data.jpa.repository.*;

@@ -1,4 +1,4 @@
-package com.predix.rearview.web.rest.vm;
+package edu.four04.sscapp.web.rest.vm;
 
 /**
  * View Model object for storing the user's key and password.

@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .factory('Assets', Assets);
 
     Assets.$inject = ['$resource', 'DateUtils'];

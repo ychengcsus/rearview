@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .constant('errorConstants', (function() {
             var problemBaseUrl = 'http://www.jhipster.tech/problem';
             return {

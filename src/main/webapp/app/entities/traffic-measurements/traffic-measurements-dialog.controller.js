@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .controller('TrafficMeasurementsDialogController', TrafficMeasurementsDialogController);
 
     TrafficMeasurementsDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'TrafficMeasurements'];
@@ -34,7 +34,7 @@
         }
 
         function onSaveSuccess (result) {
-            $scope.$emit('rearviewFinal1App:trafficMeasurementsUpdate', result);
+            $scope.$emit('sscappApp:trafficMeasurementsUpdate', result);
             $uibModalInstance.close(result);
             vm.isSaving = false;
         }
@@ -44,7 +44,7 @@
         }
 
         vm.datePickerOpenStatus.startTime = false;
-        vm.datePickerOpenStatus.endTime = false;
+        vm.datePickerOpenStatus.end_time = false;
         vm.datePickerOpenStatus.timestamp = false;
 
         function openCalendar (date) {

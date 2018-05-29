@@ -1,4 +1,4 @@
-package com.predix.rearview.web.rest.vm;
+package edu.four04.sscapp.web.rest.vm;
 
 import ch.qos.logback.classic.Logger;
 

@@ -1,0 +1,22 @@
+{
+    "sscappApp": {
+        "appointmentColor" : {
+            "home": {
+                "title": "Appointment Colors",
+                "createLabel": "Crear nuevo Appointment Color",
+                "createOrEditLabel": "Crear o editar Appointment Color"
+            },
+            "created": "Un nuevo Appointment Color ha sido creado con el identificador {{ param }}",
+            "updated": "Un Appointment Color ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Appointment Color ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Appointment Color {{ id }}?"
+            },
+            "detail": {
+                "title": "Appointment Color"
+            },
+            "primary": "Primary",
+            "secondary": "Secondary"
+        }
+    }
+}

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .controller('TrafficMeasurementsDetailController', TrafficMeasurementsDetailController);
 
     TrafficMeasurementsDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'TrafficMeasurements'];
@@ -13,7 +13,7 @@
         vm.trafficMeasurements = entity;
         vm.previousState = previousState.name;
 
-        var unsubscribe = $rootScope.$on('rearviewFinal1App:trafficMeasurementsUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('sscappApp:trafficMeasurementsUpdate', function(event, result) {
             vm.trafficMeasurements = result;
         });
         $scope.$on('$destroy', unsubscribe);

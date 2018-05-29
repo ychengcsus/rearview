@@ -1,0 +1,32 @@
+
+{
+    "sscappApp": {
+        "assets" : {
+            "home": {
+                "title": "Assets",
+                "createLabel": "Crear nuevo Assets",
+                "createOrEditLabel": "Crear o editar Assets"
+            },
+            "created": "Un nuevo Assets ha sido creado con el identificador {{ param }}",
+            "updated": "Un Assets ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Assets ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Assets {{ id }}?"
+            },
+            "detail": {
+                "title": "Assets"
+            },
+            "assetUuid": "Asset Uuid",
+            "description": "Description",
+            "properties": "Properties",
+            "status": "Status",
+            "assetType": "Asset Type",
+            "mediaType": "Media Type",
+            "eventTypes": "Event Types",
+            "coordinates": "Coordinates",
+            "parentAssetUuid": "Parent Asset Uuid",
+            "assetCreationDate": "Asset Creation Date",
+            "assetToLocationId": "Asset To Location Id"
+        }
+    }
+}

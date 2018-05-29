@@ -3,4 +3,4 @@
  *
  * More information on https://github.com/zalando/problem-spring-web
  */
-package com.predix.rearview.web.rest.errors;
+package edu.four04.sscapp.web.rest.errors;

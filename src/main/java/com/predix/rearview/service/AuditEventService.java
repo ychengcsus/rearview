@@ -1,7 +1,7 @@
-package com.predix.rearview.service;
+package edu.four04.sscapp.service;
 
-import com.predix.rearview.config.audit.AuditEventConverter;
-import com.predix.rearview.repository.PersistenceAuditEventRepository;
+import edu.four04.sscapp.config.audit.AuditEventConverter;
+import edu.four04.sscapp.repository.PersistenceAuditEventRepository;
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

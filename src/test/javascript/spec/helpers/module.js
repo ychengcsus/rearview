@@ -1,4 +1,4 @@
-beforeEach(module('rearviewFinal1App'));
+beforeEach(module('sscappApp'));
 /**
  * returns a function whose angular will be replaced
  * with whatever mock was supplied.

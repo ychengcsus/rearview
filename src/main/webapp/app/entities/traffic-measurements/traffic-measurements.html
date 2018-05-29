@@ -1,12 +1,12 @@
 <div>
-    <h2>Traffic Measurements</h2>
+    <h2 data-translate="sscappApp.trafficMeasurements.home.title">Traffic Measurements</h2>
     <jhi-alert></jhi-alert>
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-4 no-padding-left">
                 <button class="btn btn-primary" ui-sref="traffic-measurements.new" >
                     <span class="glyphicon glyphicon-plus"></span>
-                    <span >
+                    <span  data-translate="sscappApp.trafficMeasurements.home.createLabel">
                         Create new Traffic Measurements
                     </span>
                 </button>
@@ -14,22 +14,22 @@
         </div>
     </div>
     <br/>
-    <div class="table-responsive">
-        <table class="jh-table table table-striped">
-            <thead>
+    <div class="ibox-content table-responsive">
+						<table id="mytable" datatable="ng" dt-options="dtOptions"  class="jh-table table table-striped table-bordered table-hover dataTables-example">
+							<thead>
                 <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
-                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="startTime"><span>Start Time</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="endTime"><span>End Time</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="assetUuid"><span>Asset Uuid</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="assetDescription"><span>Asset Description</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="eventType"><span>Event Type</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="counterDirection"><span>Counter Direction</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="counterDirectionSpeed"><span>Counter Direction Speed</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="counterDirectionVehicleCount"><span>Counter Direction Vehicle Count</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="speed"><span>Speed</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="vehicleCount"><span>Vehicle Count</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="timestamp"><span>Timestamp</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="startTime"><span data-translate="sscappApp.trafficMeasurements.startTime">Start Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="end_time"><span data-translate="sscappApp.trafficMeasurements.end_time">End Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="asset_uuid"><span data-translate="sscappApp.trafficMeasurements.asset_uuid">Asset Uuid</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="asset_description"><span data-translate="sscappApp.trafficMeasurements.asset_description">Asset Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="event_type"><span data-translate="sscappApp.trafficMeasurements.event_type">Event Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="counter_direction"><span data-translate="sscappApp.trafficMeasurements.counter_direction">Counter Direction</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="counter_direction_speed"><span data-translate="sscappApp.trafficMeasurements.counter_direction_speed">Counter Direction Speed</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="counter_direction_vehicle_count"><span data-translate="sscappApp.trafficMeasurements.counter_direction_vehicle_count">Counter Direction Vehicle Count</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="speed"><span data-translate="sscappApp.trafficMeasurements.speed">Speed</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicle_count"><span data-translate="sscappApp.trafficMeasurements.vehicle_count">Vehicle Count</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="timestamp"><span data-translate="sscappApp.trafficMeasurements.timestamp">Timestamp</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -37,15 +37,15 @@
                 <tr ng-repeat="trafficMeasurements in vm.trafficMeasurements track by trafficMeasurements.id">
                     <td><a ui-sref="traffic-measurements-detail({id:trafficMeasurements.id})">{{trafficMeasurements.id}}</a></td>
                     <td>{{trafficMeasurements.startTime | date:'medium'}}</td>
-                    <td>{{trafficMeasurements.endTime | date:'medium'}}</td>
-                    <td>{{trafficMeasurements.assetUuid}}</td>
-                    <td>{{trafficMeasurements.assetDescription}}</td>
-                    <td>{{trafficMeasurements.eventType}}</td>
-                    <td>{{trafficMeasurements.counterDirection}}</td>
-                    <td>{{trafficMeasurements.counterDirectionSpeed}}</td>
-                    <td>{{trafficMeasurements.counterDirectionVehicleCount}}</td>
+                    <td>{{trafficMeasurements.end_time | date:'medium'}}</td>
+                    <td>{{trafficMeasurements.asset_uuid}}</td>
+                    <td>{{trafficMeasurements.asset_description}}</td>
+                    <td>{{trafficMeasurements.event_type}}</td>
+                    <td>{{trafficMeasurements.counter_direction}}</td>
+                    <td>{{trafficMeasurements.counter_direction_speed}}</td>
+                    <td>{{trafficMeasurements.counter_direction_vehicle_count}}</td>
                     <td>{{trafficMeasurements.speed}}</td>
-                    <td>{{trafficMeasurements.vehicleCount}}</td>
+                    <td>{{trafficMeasurements.vehicle_count}}</td>
                     <td>{{trafficMeasurements.timestamp | date:'medium'}}</td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
@@ -53,19 +53,19 @@
                                     ui-sref="traffic-measurements-detail({id:trafficMeasurements.id})"
                                     class="btn btn-info btn-sm">
                                 <span class="glyphicon glyphicon-eye-open"></span>
-                                <span class="hidden-sm-down"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
                             </button>
                             <button type="submit"
                                     ui-sref="traffic-measurements.edit({id:trafficMeasurements.id})"
                                     class="btn btn-primary btn-sm">
                                 <span class="glyphicon glyphicon-pencil"></span>
-                                <span class="hidden-sm-down"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
                             </button>
                             <button type="submit"
                                     ui-sref="traffic-measurements.delete({id:trafficMeasurements.id})"
                                     class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-remove-circle"></span>
-                                <span class="hidden-sm-down"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
                             </button>
                         </div>
                     </td>

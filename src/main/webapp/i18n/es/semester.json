@@ -1,0 +1,23 @@
+{
+    "sscappApp": {
+        "semester" : {
+            "home": {
+                "title": "Semesters",
+                "createLabel": "Crear nuevo Semester",
+                "createOrEditLabel": "Crear o editar Semester"
+            },
+            "created": "Un nuevo Semester ha sido creado con el identificador {{ param }}",
+            "updated": "Un Semester ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Semester ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Semester {{ id }}?"
+            },
+            "detail": {
+                "title": "Semester"
+            },
+            "seasonalName": "Seasonal Name",
+            "year": "Year",
+            "appointments": "Appointments"
+        }
+    }
+}

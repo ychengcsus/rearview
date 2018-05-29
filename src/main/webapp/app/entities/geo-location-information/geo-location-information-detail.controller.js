@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .controller('GeoLocationInformationDetailController', GeoLocationInformationDetailController);
 
     GeoLocationInformationDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'GeoLocationInformation'];
@@ -13,7 +13,7 @@
         vm.geoLocationInformation = entity;
         vm.previousState = previousState.name;
 
-        var unsubscribe = $rootScope.$on('rearviewFinal1App:geoLocationInformationUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('sscappApp:geoLocationInformationUpdate', function(event, result) {
             vm.geoLocationInformation = result;
         });
         $scope.$on('$destroy', unsubscribe);

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .config(stateConfig);
 
     stateConfig.$inject = ['$stateProvider'];
@@ -22,7 +22,10 @@
                     function (Auth) {
                         return Auth.authorize();
                     }
-                ]
+                ],
+                translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                    $translatePartialLoader.addPart('global');
+                }]
             }
         });
     }

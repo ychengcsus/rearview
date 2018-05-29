@@ -1,0 +1,22 @@
+{
+    "sscappApp": {
+        "appointmentType" : {
+            "home": {
+                "title": "Appointment Types",
+                "createLabel": "Crear nuevo Appointment Type",
+                "createOrEditLabel": "Crear o editar Appointment Type"
+            },
+            "created": "Un nuevo Appointment Type ha sido creado con el identificador {{ param }}",
+            "updated": "Un Appointment Type ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Appointment Type ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Appointment Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Appointment Type"
+            },
+            "title": "Title",
+            "defaultDuration": "Default Duration"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "sscappApp": {
+        "notebook" : {
+            "home": {
+                "title": "Notebooks",
+                "createLabel": "Crear nuevo Notebook",
+                "createOrEditLabel": "Crear o editar Notebook"
+            },
+            "created": "Un nuevo Notebook ha sido creado con el identificador {{ param }}",
+            "updated": "Un Notebook ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Notebook ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Notebook {{ id }}?"
+            },
+            "detail": {
+                "title": "Notebook"
+            },
+            "student": "Student",
+            "notes": "Notes"
+        }
+    }
+}

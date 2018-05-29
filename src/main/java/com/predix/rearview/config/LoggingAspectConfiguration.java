@@ -1,6 +1,6 @@
-package com.predix.rearview.config;
+package edu.four04.sscapp.config;
 
-import com.predix.rearview.aop.logging.LoggingAspect;
+import edu.four04.sscapp.aop.logging.LoggingAspect;
 
 import io.github.jhipster.config.JHipsterConstants;
 

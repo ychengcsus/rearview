@@ -1,4 +1,4 @@
 /**
  * Spring Security configuration.
  */
-package com.predix.rearview.security;
+package edu.four04.sscapp.security;

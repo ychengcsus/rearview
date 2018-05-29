@@ -1,4 +1,4 @@
-package com.predix.rearview.config;
+package edu.four04.sscapp.config;
 
 import org.apache.commons.lang3.CharEncoding;
 import org.slf4j.Logger;

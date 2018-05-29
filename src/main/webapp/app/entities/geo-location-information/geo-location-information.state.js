@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .config(stateConfig);
 
     stateConfig.$inject = ['$stateProvider'];
@@ -14,7 +14,7 @@
             url: '/geo-location-information?page&sort&search',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'GeoLocationInformations'
+                pageTitle: 'sscappApp.geoLocationInformation.home.title'
             },
             views: {
                 'content@': {
@@ -44,6 +44,11 @@
                         search: $stateParams.search
                     };
                 }],
+                translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                    $translatePartialLoader.addPart('geoLocationInformation');
+                    $translatePartialLoader.addPart('global');
+                    return $translate.refresh();
+                }]
             }
         })
         .state('geo-location-information-detail', {
@@ -51,7 +56,7 @@
             url: '/geo-location-information/{id}',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'GeoLocationInformation'
+                pageTitle: 'sscappApp.geoLocationInformation.detail.title'
             },
             views: {
                 'content@': {
@@ -61,6 +66,10 @@
                 }
             },
             resolve: {
+                translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                    $translatePartialLoader.addPart('geoLocationInformation');
+                    return $translate.refresh();
+                }],
                 entity: ['$stateParams', 'GeoLocationInformation', function($stateParams, GeoLocationInformation) {
                     return GeoLocationInformation.get({id : $stateParams.id}).$promise;
                 }],

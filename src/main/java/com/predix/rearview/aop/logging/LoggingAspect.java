@@ -1,4 +1,4 @@
-package com.predix.rearview.aop.logging;
+package edu.four04.sscapp.aop.logging;
 
 import io.github.jhipster.config.JHipsterConstants;
 
@@ -43,9 +43,9 @@ public class LoggingAspect {
     /**
      * Pointcut that matches all Spring beans in the application's main packages.
      */
-    @Pointcut("within(com.predix.rearview.repository..*)"+
-        " || within(com.predix.rearview.service..*)"+
-        " || within(com.predix.rearview.web.rest..*)")
+    @Pointcut("within(edu.four04.sscapp.repository..*)"+
+        " || within(edu.four04.sscapp.service..*)"+
+        " || within(edu.four04.sscapp.web.rest..*)")
     public void applicationPackagePointcut() {
         // Method is empty as this is just a Pointcut, the implementations are in the advices.
     }

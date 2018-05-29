@@ -1,54 +1,54 @@
 
 <div>
-    <h2><span>Geo Location Information</span> {{vm.geoLocationInformation.id}}</h2>
+    <h2><span data-translate="sscappApp.geoLocationInformation.detail.title">Geo Location Information</span> {{vm.geoLocationInformation.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="dl-horizontal jh-entity-details">
-        <dt><span>Location Uuid</span></dt>
+        <dt><span data-translate="sscappApp.geoLocationInformation.locationUuid">Location Uuid</span></dt>
         <dd>
             <span>{{vm.geoLocationInformation.locationUuid}}</span>
         </dd>
-        <dt><span>Location Type</span></dt>
+        <dt><span data-translate="sscappApp.geoLocationInformation.locationType">Location Type</span></dt>
         <dd>
             <span>{{vm.geoLocationInformation.locationType}}</span>
         </dd>
-        <dt><span>Parent Location Uuid</span></dt>
+        <dt><span data-translate="sscappApp.geoLocationInformation.parentLocationUuid">Parent Location Uuid</span></dt>
         <dd>
             <span>{{vm.geoLocationInformation.parentLocationUuid}}</span>
         </dd>
-        <dt><span>Coordinates Type</span></dt>
+        <dt><span data-translate="sscappApp.geoLocationInformation.coordinatesType">Coordinates Type</span></dt>
         <dd>
             <span>{{vm.geoLocationInformation.coordinatesType}}</span>
         </dd>
-        <dt><span>Coordinates</span></dt>
+        <dt><span data-translate="sscappApp.geoLocationInformation.coordinates">Coordinates</span></dt>
         <dd>
             <span>{{vm.geoLocationInformation.coordinates}}</span>
         </dd>
-        <dt><span>City</span></dt>
+        <dt><span data-translate="sscappApp.geoLocationInformation.city">City</span></dt>
         <dd>
             <span>{{vm.geoLocationInformation.city}}</span>
         </dd>
-        <dt><span>State</span></dt>
+        <dt><span data-translate="sscappApp.geoLocationInformation.state">State</span></dt>
         <dd>
             <span>{{vm.geoLocationInformation.state}}</span>
         </dd>
-        <dt><span>Country</span></dt>
+        <dt><span data-translate="sscappApp.geoLocationInformation.country">Country</span></dt>
         <dd>
             <span>{{vm.geoLocationInformation.country}}</span>
         </dd>
-        <dt><span>Zipcode</span></dt>
+        <dt><span data-translate="sscappApp.geoLocationInformation.zipcode">Zipcode</span></dt>
         <dd>
             <span>{{vm.geoLocationInformation.zipcode}}</span>
         </dd>
-        <dt><span>Timezone</span></dt>
+        <dt><span data-translate="sscappApp.geoLocationInformation.timezone">Timezone</span></dt>
         <dd>
             <span>{{vm.geoLocationInformation.timezone}}</span>
         </dd>
-        <dt><span>Address</span></dt>
+        <dt><span data-translate="sscappApp.geoLocationInformation.address">Address</span></dt>
         <dd>
             <span>{{vm.geoLocationInformation.address}}</span>
         </dd>
-        <dt><span>Analytic Category</span></dt>
+        <dt><span data-translate="sscappApp.geoLocationInformation.analyticCategory">Analytic Category</span></dt>
         <dd>
             <span>{{vm.geoLocationInformation.analyticCategory}}</span>
         </dd>
@@ -57,11 +57,11 @@
     <button type="submit"
             ui-sref="{{ vm.previousState }}"
             class="btn btn-info">
-        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
     </button>
 
     <button type="button" ui-sref="geo-location-information-detail.edit({id:vm.geoLocationInformation.id})" class="btn btn-primary">
         <span class="glyphicon glyphicon-pencil"></span>
-        <span class="hidden-sm-down"> Edit</span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
     </button>
 </div>

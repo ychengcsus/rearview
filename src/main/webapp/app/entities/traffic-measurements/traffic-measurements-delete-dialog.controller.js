@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .controller('TrafficMeasurementsDeleteController',TrafficMeasurementsDeleteController);
 
     TrafficMeasurementsDeleteController.$inject = ['$uibModalInstance', 'entity', 'TrafficMeasurements'];

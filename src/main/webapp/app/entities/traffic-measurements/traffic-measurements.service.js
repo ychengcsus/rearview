@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .factory('TrafficMeasurements', TrafficMeasurements);
 
     TrafficMeasurements.$inject = ['$resource', 'DateUtils'];
@@ -17,7 +17,7 @@
                     if (data) {
                         data = angular.fromJson(data);
                         data.startTime = DateUtils.convertDateTimeFromServer(data.startTime);
-                        data.endTime = DateUtils.convertDateTimeFromServer(data.endTime);
+                        data.end_time = DateUtils.convertDateTimeFromServer(data.end_time);
                         data.timestamp = DateUtils.convertDateTimeFromServer(data.timestamp);
                     }
                     return data;

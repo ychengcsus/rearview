@@ -1,6 +1,6 @@
-package com.predix.rearview.service;
+package edu.four04.sscapp.service;
 
-import com.predix.rearview.domain.User;
+import edu.four04.sscapp.domain.User;
 
 import io.github.jhipster.config.JHipsterProperties;
 

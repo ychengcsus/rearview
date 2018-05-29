@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .controller('AssetsDialogController', AssetsDialogController);
 
     AssetsDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Assets'];
@@ -34,7 +34,7 @@
         }
 
         function onSaveSuccess (result) {
-            $scope.$emit('rearviewFinal1App:assetsUpdate', result);
+            $scope.$emit('sscappApp:assetsUpdate', result);
             $uibModalInstance.close(result);
             vm.isSaving = false;
         }

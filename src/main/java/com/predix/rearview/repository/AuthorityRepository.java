@@ -1,6 +1,6 @@
-package com.predix.rearview.repository;
+package edu.four04.sscapp.repository;
 
-import com.predix.rearview.domain.Authority;
+import edu.four04.sscapp.domain.Authority;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

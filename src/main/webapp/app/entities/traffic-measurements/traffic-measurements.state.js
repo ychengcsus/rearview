@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .config(stateConfig);
 
     stateConfig.$inject = ['$stateProvider'];
@@ -14,7 +14,7 @@
             url: '/traffic-measurements?page&sort&search',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'TrafficMeasurements'
+                pageTitle: 'sscappApp.trafficMeasurements.home.title'
             },
             views: {
                 'content@': {
@@ -44,6 +44,11 @@
                         search: $stateParams.search
                     };
                 }],
+                translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                    $translatePartialLoader.addPart('trafficMeasurements');
+                    $translatePartialLoader.addPart('global');
+                    return $translate.refresh();
+                }]
             }
         })
         .state('traffic-measurements-detail', {
@@ -51,7 +56,7 @@
             url: '/traffic-measurements/{id}',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'TrafficMeasurements'
+                pageTitle: 'sscappApp.trafficMeasurements.detail.title'
             },
             views: {
                 'content@': {
@@ -61,6 +66,10 @@
                 }
             },
             resolve: {
+                translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                    $translatePartialLoader.addPart('trafficMeasurements');
+                    return $translate.refresh();
+                }],
                 entity: ['$stateParams', 'TrafficMeasurements', function($stateParams, TrafficMeasurements) {
                     return TrafficMeasurements.get({id : $stateParams.id}).$promise;
                 }],
@@ -116,15 +125,15 @@
                         entity: function () {
                             return {
                                 startTime: null,
-                                endTime: null,
-                                assetUuid: null,
-                                assetDescription: null,
-                                eventType: null,
-                                counterDirection: null,
-                                counterDirectionSpeed: null,
-                                counterDirectionVehicleCount: null,
+                                end_time: null,
+                                asset_uuid: null,
+                                asset_description: null,
+                                event_type: null,
+                                counter_direction: null,
+                                counter_direction_speed: null,
+                                counter_direction_vehicle_count: null,
                                 speed: null,
-                                vehicleCount: null,
+                                vehicle_count: null,
                                 timestamp: null,
                                 id: null
                             };

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('rearviewFinal1App')
+        .module('sscappApp')
         .controller('GeoLocationInformationDialogController', GeoLocationInformationDialogController);
 
     GeoLocationInformationDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'GeoLocationInformation'];
@@ -32,7 +32,7 @@
         }
 
         function onSaveSuccess (result) {
-            $scope.$emit('rearviewFinal1App:geoLocationInformationUpdate', result);
+            $scope.$emit('sscappApp:geoLocationInformationUpdate', result);
             $uibModalInstance.close(result);
             vm.isSaving = false;
         }

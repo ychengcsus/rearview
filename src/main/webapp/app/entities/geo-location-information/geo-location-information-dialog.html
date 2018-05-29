@@ -4,83 +4,83 @@
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="vm.clear()">&times;</button>
-        <h4 class="modal-title" id="myGeoLocationInformationLabel">Create or edit a Geo Location Information</h4>
+        <h4 class="modal-title" id="myGeoLocationInformationLabel" data-translate="sscappApp.geoLocationInformation.home.createOrEditLabel">Create or edit a Geo Location Information</h4>
     </div>
     <div class="modal-body">
         <jhi-alert-error></jhi-alert-error>
         <div class="form-group" ng-show="vm.geoLocationInformation.id">
-            <label for="id">ID</label>
+            <label for="id" data-translate="global.field.id">ID</label>
             <input type="text" class="form-control" id="id" name="id"
                     ng-model="vm.geoLocationInformation.id" readonly />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_locationUuid">Location Uuid</label>
+            <label class="control-label" data-translate="sscappApp.geoLocationInformation.locationUuid" for="field_locationUuid">Location Uuid</label>
             <input type="number" class="form-control" name="locationUuid" id="field_locationUuid"
                     ng-model="vm.geoLocationInformation.locationUuid"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_locationType">Location Type</label>
+            <label class="control-label" data-translate="sscappApp.geoLocationInformation.locationType" for="field_locationType">Location Type</label>
             <input type="text" class="form-control" name="locationType" id="field_locationType"
                     ng-model="vm.geoLocationInformation.locationType"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_parentLocationUuid">Parent Location Uuid</label>
+            <label class="control-label" data-translate="sscappApp.geoLocationInformation.parentLocationUuid" for="field_parentLocationUuid">Parent Location Uuid</label>
             <input type="number" class="form-control" name="parentLocationUuid" id="field_parentLocationUuid"
                     ng-model="vm.geoLocationInformation.parentLocationUuid"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_coordinatesType">Coordinates Type</label>
+            <label class="control-label" data-translate="sscappApp.geoLocationInformation.coordinatesType" for="field_coordinatesType">Coordinates Type</label>
             <input type="text" class="form-control" name="coordinatesType" id="field_coordinatesType"
                     ng-model="vm.geoLocationInformation.coordinatesType"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_coordinates">Coordinates</label>
-            <input type="text" class="form-control" name="coordinates" id="field_coordinates"
+            <label class="control-label" data-translate="sscappApp.geoLocationInformation.coordinates" for="field_coordinates">Coordinates</label>
+            <input type="number" class="form-control" name="coordinates" id="field_coordinates"
                     ng-model="vm.geoLocationInformation.coordinates"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_city">City</label>
+            <label class="control-label" data-translate="sscappApp.geoLocationInformation.city" for="field_city">City</label>
             <input type="text" class="form-control" name="city" id="field_city"
                     ng-model="vm.geoLocationInformation.city"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_state">State</label>
+            <label class="control-label" data-translate="sscappApp.geoLocationInformation.state" for="field_state">State</label>
             <input type="text" class="form-control" name="state" id="field_state"
                     ng-model="vm.geoLocationInformation.state"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_country">Country</label>
+            <label class="control-label" data-translate="sscappApp.geoLocationInformation.country" for="field_country">Country</label>
             <input type="text" class="form-control" name="country" id="field_country"
                     ng-model="vm.geoLocationInformation.country"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_zipcode">Zipcode</label>
+            <label class="control-label" data-translate="sscappApp.geoLocationInformation.zipcode" for="field_zipcode">Zipcode</label>
             <input type="number" class="form-control" name="zipcode" id="field_zipcode"
                     ng-model="vm.geoLocationInformation.zipcode"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_timezone">Timezone</label>
+            <label class="control-label" data-translate="sscappApp.geoLocationInformation.timezone" for="field_timezone">Timezone</label>
             <input type="text" class="form-control" name="timezone" id="field_timezone"
                     ng-model="vm.geoLocationInformation.timezone"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_address">Address</label>
+            <label class="control-label" data-translate="sscappApp.geoLocationInformation.address" for="field_address">Address</label>
             <input type="text" class="form-control" name="address" id="field_address"
                     ng-model="vm.geoLocationInformation.address"
                     />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_analyticCategory">Analytic Category</label>
+            <label class="control-label" data-translate="sscappApp.geoLocationInformation.analyticCategory" for="field_analyticCategory">Analytic Category</label>
             <input type="text" class="form-control" name="analyticCategory" id="field_analyticCategory"
                     ng-model="vm.geoLocationInformation.analyticCategory"
                     />
@@ -89,10 +89,10 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
-            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
         </button>
         <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
-            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
         </button>
     </div>
 </form>

@@ -1,4 +1,4 @@
-package com.predix.rearview.domain;
+package edu.four04.sscapp.domain;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -19,8 +19,7 @@ public class GeoLocationInformation implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
-    @SequenceGenerator(name = "sequenceGenerator")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "location_uuid")
@@ -36,7 +35,7 @@ public class GeoLocationInformation implements Serializable {
     private String coordinatesType;
 
     @Column(name = "coordinates")
-    private String coordinates;
+    private Long coordinates;
 
     @Column(name = "city")
     private String city;
@@ -48,7 +47,7 @@ public class GeoLocationInformation implements Serializable {
     private String country;
 
     @Column(name = "zipcode")
-    private Long zipcode;
+    private Integer zipcode;
 
     @Column(name = "timezone")
     private String timezone;
@@ -120,16 +119,16 @@ public class GeoLocationInformation implements Serializable {
         this.coordinatesType = coordinatesType;
     }
 
-    public String getCoordinates() {
+    public Long getCoordinates() {
         return coordinates;
     }
 
-    public GeoLocationInformation coordinates(String coordinates) {
+    public GeoLocationInformation coordinates(Long coordinates) {
         this.coordinates = coordinates;
         return this;
     }
 
-    public void setCoordinates(String coordinates) {
+    public void setCoordinates(Long coordinates) {
         this.coordinates = coordinates;
     }
 
@@ -172,16 +171,16 @@ public class GeoLocationInformation implements Serializable {
         this.country = country;
     }
 
-    public Long getZipcode() {
+    public Integer getZipcode() {
         return zipcode;
     }
 
-    public GeoLocationInformation zipcode(Long zipcode) {
+    public GeoLocationInformation zipcode(Integer zipcode) {
         this.zipcode = zipcode;
         return this;
     }
 
-    public void setZipcode(Long zipcode) {
+    public void setZipcode(Integer zipcode) {
         this.zipcode = zipcode;
     }
 
@@ -253,7 +252,7 @@ public class GeoLocationInformation implements Serializable {
             ", locationType='" + getLocationType() + "'" +
             ", parentLocationUuid=" + getParentLocationUuid() +
             ", coordinatesType='" + getCoordinatesType() + "'" +
-            ", coordinates='" + getCoordinates() + "'" +
+            ", coordinates=" + getCoordinates() +
             ", city='" + getCity() + "'" +
             ", state='" + getState() + "'" +
             ", country='" + getCountry() + "'" +

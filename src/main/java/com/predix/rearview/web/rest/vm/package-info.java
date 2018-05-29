@@ -1,4 +1,4 @@
 /**
  * View Models used by Spring MVC REST controllers.
  */
-package com.predix.rearview.web.rest.vm;
+package edu.four04.sscapp.web.rest.vm;

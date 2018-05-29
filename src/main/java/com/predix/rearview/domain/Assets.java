@@ -1,4 +1,4 @@
-package com.predix.rearview.domain;
+package edu.four04.sscapp.domain;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -20,8 +20,7 @@ public class Assets implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
-    @SequenceGenerator(name = "sequenceGenerator")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "asset_uuid")
@@ -46,7 +45,7 @@ public class Assets implements Serializable {
     private String eventTypes;
 
     @Column(name = "coordinates")
-    private String coordinates;
+    private Long coordinates;
 
     @Column(name = "parent_asset_uuid")
     private Long parentAssetUuid;
@@ -157,16 +156,16 @@ public class Assets implements Serializable {
         this.eventTypes = eventTypes;
     }
 
-    public String getCoordinates() {
+    public Long getCoordinates() {
         return coordinates;
     }
 
-    public Assets coordinates(String coordinates) {
+    public Assets coordinates(Long coordinates) {
         this.coordinates = coordinates;
         return this;
     }
 
-    public void setCoordinates(String coordinates) {
+    public void setCoordinates(Long coordinates) {
         this.coordinates = coordinates;
     }
 
@@ -241,7 +240,7 @@ public class Assets implements Serializable {
             ", assetType='" + getAssetType() + "'" +
             ", mediaType='" + getMediaType() + "'" +
             ", eventTypes='" + getEventTypes() + "'" +
-            ", coordinates='" + getCoordinates() + "'" +
+            ", coordinates=" + getCoordinates() +
             ", parentAssetUuid=" + getParentAssetUuid() +
             ", assetCreationDate='" + getAssetCreationDate() + "'" +
             ", assetToLocationId=" + getAssetToLocationId() +

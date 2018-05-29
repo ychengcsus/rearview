@@ -1,4 +1,4 @@
 /**
  * Spring Framework configuration files.
  */
-package com.predix.rearview.config;
+package edu.four04.sscapp.config;

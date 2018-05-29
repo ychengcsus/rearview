@@ -1,4 +1,4 @@
 /**
  * Data Transfer Objects.
  */
-package com.predix.rearview.service.dto;
+package edu.four04.sscapp.service.dto;

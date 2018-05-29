@@ -1,6 +1,6 @@
-package com.predix.rearview.repository;
+package edu.four04.sscapp.repository;
 
-import com.predix.rearview.domain.PersistentAuditEvent;
+import edu.four04.sscapp.domain.PersistentAuditEvent;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,4 +1,4 @@
 /**
  * Spring Data JPA repositories.
  */
-package com.predix.rearview.repository;
+package edu.four04.sscapp.repository;
